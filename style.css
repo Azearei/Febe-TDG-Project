@@ -1,19 +1,15 @@
-body{
-    margin: 0%
-}
-
-nav{
+nav {
     background-color: #403F48;
 }
 
-h1 a{
+h1 a {
     text-decoration: none;
     color: #e9e4e6;
     background-color: #403F48;
     font-weight: lighter;
 }
 
-h3 a{
+h3 a {
     text-decoration: none;
     color: #e9e4e6;
     background-color: #403F48;
@@ -24,12 +20,12 @@ footer {
     background-color: #403F48;
 }
 
-.socialIcons{
+.socialIcons {
     display: flex;
     justify-content: right;
 }
 
-.socialIcons a{
+.socialIcons a {
     text-decoration: none;
     padding: 10px;
     color: #e9e4e6;
