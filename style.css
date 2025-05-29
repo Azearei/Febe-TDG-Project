@@ -7,17 +7,49 @@ h1 a {
     background-color: #403F48;
     color: #e9e4e6;
     font-weight: lighter;
-    transform: scale(1.3);
+    transform: scale(1);
 }
 
-
-h3 a {
-    text-decoration: none;
-    color: #e9e4e6;
+/* Navbar container */
+.navbar {
     background-color: #403F48;
-    border-radius: 50%;
-    margin: ;
-    font-weight: lighter;
+    padding: 15px 30px;
+    text-align: none;
+}
+
+/* Navbar links */
+.navbar a {
+    color: #e9e4e6;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 10px; 
+    border-radius: 5px;
+    position: relative;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect */
+.navbar a:hover {
+    color: #403F48;
+    background-color: #e9e4e6;
+}
+
+/* underline animation on hover */
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0%;
+    width: 0;
+    height: 2px;
+    background: #403F48;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
 }
 
 footer {
@@ -36,22 +68,37 @@ footer {
     margin: 10px;
 }
 
-.headerContainer {
+.text-line-container {
     display: flex;
     align-items: center;
-    justify-content: left;
 }
 
-.title {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    column-gap: 1.6rem;
+.island-font {
+    font-family: 'Island Moments', cursive;
+    font-size: 36px;
+    margin-right: 10px;
+    white-space: nowrap;
+    color: #403F48;
 }
 
-.title::before, .title::after {
-    content: "";
-    height: 2px;
+.line {
+    flex-grow: 1;
+    height: 1px;
     background-color: #403F48;
-    display: block;
 }
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    width: 350px;
+    background-color: #e9e4e6;
+    border: 2px solid #403F48;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgb(64, 63, 72, 0.3);
+    z-index: 1000;
+    user-select: none;
+}
+
+
