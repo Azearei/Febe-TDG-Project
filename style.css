@@ -59,6 +59,23 @@ footer {
 .socialIcons {
     display: flex;
     justify-content: right;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.socialIcons .icon {
+    display: inline-block;
+    background-color: #403F48;
+    color: #e9e4e6;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    margin: 0 10px;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 0 5px transparent; 
 }
 
 .socialIcons a {
@@ -67,6 +84,17 @@ footer {
     color: #e9e4e6;
     margin: 10px;
 }
+
+.socialIcons .icon:hover {
+    transform: scale(1.2);
+    background-color: #e9e4e6;
+    color: #403F48;
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.6); 
+}
+
+.socialIcons .instagram:hover { color: #C13584; }
+.socialIcons .facebook:hover { color: #1877f2; }
+.socialIcons .tiktok:hover { color: #000000; }
 
 .text-line-container {
     display: flex;
@@ -87,18 +115,56 @@ footer {
     background-color: #403F48;
 }
 
-.popup {
+/* contact pop up bg */
+.modal {
     display: none;
     position: fixed;
-    top: 100px;
-    left: 100px;
-    width: 350px;
-    background-color: #e9e4e6;
-    border: 2px solid #403F48;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgb(64, 63, 72, 0.3);
     z-index: 1000;
-    user-select: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(64, 63, 72, 0.8)
 }
 
+/* contact pop up content */
+.modal-content {
+    background-color: #e9e4e6;
+    margin: 10% auto;
+    padding: 20px 30px;
+    border: 2px solid #403F48;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+    font-family: 'Inria Serif';
+    color: #403F48;
+}
 
+/* close button */
+.close-btn {
+    color: #403F48;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* button styling */
+.modal-content button {
+    background-color: #403F48;
+    color: #e9e4e6;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.modal-content button:hover {
+  background-color: #5a5863;
+}
