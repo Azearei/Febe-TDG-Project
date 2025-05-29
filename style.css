@@ -4,10 +4,12 @@ background-color: #e9e4e6;
 
 h1 a {
     text-decoration: none;
-    color: #e9e4e6;
     background-color: #403F48;
+    color: #e9e4e6;
     font-weight: lighter;
+    transform: scale(1.3);
 }
+
 
 h3 a {
     text-decoration: none;
@@ -34,16 +36,22 @@ footer {
     margin: 10px;
 }
 
-.black {
-    background: #403F48;
-    position: relative;
-    margin-top: -17px;
-    height: 5px;
-    z-index: -1;
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: left;
 }
 
-.Header {
-    background: #e9e4e6;
-    display: inline;
-    padding-right: 20px;
+.title {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    column-gap: 1.6rem;
+}
+
+.title::before, .title::after {
+    content: "";
+    height: 2px;
+    background-color: #403F48;
+    display: block;
 }
