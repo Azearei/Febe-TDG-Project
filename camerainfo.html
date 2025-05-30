@@ -22,16 +22,39 @@
                 <a href="homepage.html">Logo</a>
                 <a href="aboutpopup.html">About</a>
             </h1>
+                        
             <!-- This is for title -->
             <div class="text-line-container">
                     <span class="island-font">Camera Information</span>
                     <div class="line"></div>
             </div>
+                <!-- Contact Button -->
                 <h3 class="navbar">
                     <a href="camerainfo.html">Camera Info</a>
                     <a href="portfolio.html">Portfolio</a>
-                    <a href="contactpopup.html">Contact</a>    
+                    <a href="#" id="contactBtn">Contact</a>    
                 </h3>
+                    <!-- Contact Pop up Modal -->
+                <div id="contactModal" class="modal">
+                    <div class="modal-content" id="draggableBox">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h2>Contact</h2>
+                                <span class="close-btn" id="closeModal">&times;</span>
+                        </div>
+                        <!-- Modal Body -->
+                        <div class="modal-body">
+                        <p><strong>Yay! Thank you for visiting my site!</strong></p>
+                        <p>Love at first sight! Eyyy :D </p>
+                        <p>
+                            If you would like to know and contact me, 
+                            <strong>email me at:</strong> 
+                            <a href="mailto:fap23506@my.hghs.school.nz">fap23506@my.hghs.school.nz</a>
+                        </p>
+                            <button onclick="window.location.href='mailto:fap23506@my.hghs.school.nz'">Send me an email!</button>
+                        </div>
+                    </div>
+                </div>
             </nav>
     </header>
         <body>
