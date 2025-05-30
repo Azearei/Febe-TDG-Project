@@ -1,61 +1,78 @@
-body {
-background-color: #e9e4e6;
+/* Import custom font */
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
+
+/* Top bar styles */
+.topbar {
+  background-color: #403F48;
+  color: #e9e4e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-h1 a {
-    text-decoration: none;
-    background-color: #403F48;
-    color: #e9e4e6;
-    font-weight: lighter;
-    transform: scale(1);
+.logo-link a {
+  font-size: 16px;
+  color: #e9e4e6;
+  text-decoration: none;
 }
 
-/* Navbar container */
-.navbar {
-    background-color: #403F48;
-    padding: 15px 30px;
-    text-align: none;
+.about-link a {
+  font-size: 16px;
+  color: #e9e4e6;
+  text-decoration: none;
 }
 
-/* Navbar links */
-.navbar a {
-    color: #e9e4e6;
-    text-decoration: none;
-    margin: 0 20px;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 5px 10px; 
-    border-radius: 5px;
-    position: relative;
-    transition: color 0.3s ease, background-color 0.3s ease;
+/* Title + line */
+.header-title {
+  display: flex;
+  align-items: center;
+  padding: 20px 30px 10px 30px;
 }
 
-/* Hover effect */
-.navbar a:hover {
-    color: #403F48;
-    background-color: #e9e4e6;
+.header-title h1 {
+  font-family: 'Island Moments', cursive;
+  font-size: 26px;
+  margin: 0;
+  margin-right: 20px;
+  font-weight: normal;
 }
 
-/* underline animation on hover */
-.navbar a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0%;
-    width: 0;
-    height: 2px;
-    background: #403F48;
-    transition: width 0.3s ease;
+.header-title hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #403F48;
 }
 
-.navbar a:hover::after {
-    width: 100%;
+/* Navigation buttons */
+.nav-buttons {
+  display: flex;
+  gap: 20px;
+  padding: 10px 30px 30px 30px;
 }
 
+.nav-buttons a {
+  background-color: #403F48;
+  color: #e9e4e6;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.nav-buttons a:hover {
+  background-color: #403F48;
+}
+
+/* for footer bg */
 footer {
     background-color: #403F48;
 }
 
+/* container for soc med icons */
 .socialIcons {
     display: flex;
     justify-content: right;
@@ -63,6 +80,7 @@ footer {
     padding: 20px 0;
 }
 
+/* individual soc icon style */
 .socialIcons .icon {
     display: inline-block;
     background-color: #403F48;
@@ -78,6 +96,7 @@ footer {
     box-shadow: 0 0 5px transparent; 
 }
 
+/* color padding inside soc icons */
 .socialIcons a {
     text-decoration: none;
     padding: 10px;
@@ -85,6 +104,7 @@ footer {
     margin: 10px;
 }
 
+/* hover effects */
 .socialIcons .icon:hover {
     transform: scale(1.2);
     background-color: #e9e4e6;
@@ -92,104 +112,127 @@ footer {
     box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.6); 
 }
 
+/* hover colours based on soc med colours */
 .socialIcons .instagram:hover { color: #C13584; }
 .socialIcons .facebook:hover { color: #1877f2; }
 .socialIcons .tiktok:hover { color: #000000; }
 
-.text-line-container {
-    display: flex;
-    align-items: center;
+/* top footer area: quote and logo +soc icons in flex with space between */
+.topFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px;
+  flex-wrap: wrap;
 }
 
-.island-font {
-    font-family: 'Island Moments', cursive;
-    font-size: 36px;
-    margin-right: 10px;
-    white-space: nowrap;
-    color: #403F48;
+/* left side of top footer with quote and sections */
+.quote-logo-left {
+  flex: 1 1 60%;
+  color: #e9e4e6;
 }
 
-.line {
-    flex-grow: 1;
-    height: 1px;
-    background-color: #403F48;
+/* right side of top footer w logo placeholder and soc icons */
+.logo-icons-right {
+  flex: 1 1 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-/* contact pop up bg */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(64, 63, 72, 0.8);
+/* logo splaceholder styling */
+.logoPlaceholder {
+  font-size: 18px;
+  color: #e9e4e6;
+  margin-bottom: 10px;
+  text-align: right;
 }
 
-/* container for modal box */
-.modal-content {
-    background-color: #e9e4e6;
-    padding: 0; /* remove padding from wrapper */
-    border: 2px solid #403F48;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Inria Serif';
-    color: #403F48;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+/* wrapper for 'about us and resources sections' */
+.about-resources {
+  margin-top: 30px;
 }
 
-/* draggable header */
-.modal-header {
-    background-color: #403F48;
-    color: #e9e4e6;
-    padding: 15px 20px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    cursor: move;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 20px;
+/* spaces for 'about us' section */
+.aboutSection {
+  margin-bottom: 25px;
 }
 
-/* body content inside modal */
-.modal-body {
-    padding: 20px 30px;
+/* headings inside 'about us and resources' */
+.aboutSection h4,
+.resourcesSection h4 {
+  color: #e9e4e6;
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
-/* close button */
-.close-btn {
-    color: #e9e4e6;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* button styling */
-.modal-body button {
-    background-color: #403F48;
-    color: #e9e4e6;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.modal-body button:hover {
-    background-color: #5a5863;
-}
-
-.modal-header h2 {
+/* remove default list styles for 'about us' section */
+.aboutSection ul {
+  list-style: none;
+  padding: 0;
   margin: 0;
-  font-size: 20px;
-  font-weight: lighter;
+}
+
+/* 'about us' list items styling */
+.aboutSection ul li {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+/* grid layout for 'resources links' */
+.resourcesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 6px 20px;
+  margin-top: 10px;
+}
+
+/* 'resources links' styling */
+.resourcesGrid a {
+  color: #e9e4e6;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+/* hover effect on resource links */
+.resourcesGrid a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* copyright text styling */
+.copyright {
+  text-align: center;
+  padding: 20px 0;
+  color: #e9e4e6;
+  font-size: 14px;
+}
+
+/* responsive ix */
+@media (max-width: 768px) {
+  .topFooter {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo-icons-right {
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .resourcesGrid {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .aboutSection, .resourcesSection {
+    text-align: center;
+  }
+}
+
+.quote-logo-left h2 {
+    font-family: 'Island Moments', cursive;
+    font-style: italic;  
+    font-weight: normal;
 }
