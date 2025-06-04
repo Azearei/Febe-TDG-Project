@@ -67,9 +67,73 @@
   background-color: #403F48;
 }
 
+
+/* Contact popup styling */
+.popup {
+  position: absolute;
+  top: 120px;
+  left: 120px;
+  width: 350px;
+  background-color: #e9e4e6;
+  border: 2px solid #403F48;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  display: none;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+/* Draggable top bar */
+.popup-header {
+  background-color: #403F48;
+  color: #e9e4e6;
+  padding: 10px 15px;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0;
+}
+
+/* Close button */
+.close-btn {
+  background: none;
+  border: none;
+  color: #e9e4e6;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Popup content */
+.popup-body {
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.popup-body a {
+  color: #0653b9;
+  font-weight: lighter;
+  text-decoration: none;
+}
+
+.email-btn {
+  background-color: #0653b9;
+  color:#e9e4e6;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+
 /* for footer bg */
 footer {
     background-color: #403F48;
+    border-radius: 0 0 10px 10px; 
+    overflow: hidden;
 }
 
 /* container for soc med icons */
@@ -106,14 +170,18 @@ footer {
 /* hover effects */
 .socialIcons .icon:hover {
     transform: scale(1.2);
-    background-color: #e9e4e6;
-    color: #403F48;
-    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.6); 
+    background-color: transparent;
+}
+
+.socialIcons .icon:hover i {
+    color: inherit;
+    filter: drop-shadow(0 0 2px #e9e4e6) drop-shadow(0 0 2px #e9e4e6);
+    transition: filter 0.3s ease;
 }
 
 /* hover colours based on soc med colours */
 .socialIcons .instagram:hover { color: #C13584; }
-.socialIcons .facebook:hover { color: #1877f2; }
+.socialIcons .facebook:hover { color: #0653b9; }
 .socialIcons .tiktok:hover { color: #000000; }
 
 /* top footer area: quote and logo +soc icons in flex with space between */
@@ -234,4 +302,5 @@ footer {
     font-family: 'Island Moments', cursive;
     font-style: italic;  
     font-weight: normal;
+    font-size: 40px;
 }

@@ -21,7 +21,7 @@
 
         <!-- Title section -->
         <div class="header-title">
-            <h1>Portfolio</h1>
+            <h1>Homepage</h1>
             <hr>
         </div>
 
@@ -29,12 +29,40 @@
         <div class="nav-buttons">
             <a href="camerainfo.html">Camera Info</a>
             <a href="portfolio.html">Portfolio</a>
-            <a href="#">Contact</a>
+            <a href="#" onclick="openContact()">Contact</a>
+        </div>
+
+        <!-- Contact Popup -->
+        <div id="contactPopup" class="popup">
+            <div class="popup-header" onmousedown="startDrag(event)">
+                <span>Contact</span>
+                <button onclick="closeContact()" class="close-btn">[ x ]</button>
+            </div>
+        <div class="popup-body">
+            <h2>Yay! Thank you for visiting my site!</h2>
+            <p>
+                If you would like to know and contact me, email me at:
+            </p>
+            <p>
+                email me at:<a href="mailto:fap23506@hghs.school.nz">fap23506@hghs.school.nz</a>
+            </p>
+        <hr>
+            <p>
+                Major props to my model:<br>
+                Rhanzi Kent Juanio, for being the ultimate photography subject while<br>
+                I’m learning the ropes!All these photos were taken by me<br>
+                (yes, I’m bragging a little), but they wouldn’t exist without<br>
+                his patience in front of my camera - and his generosity in letting<br>
+                me feature them here.<br>
+            </p>
+            <button onclick="window.location='fap23506@hghs.school.nz'" class="email-btn">
+                send me an email!
+            </button>
+            </div>
         </div>
     </header>
         <body>
             <!--Visible Content-->
-            <img src="imagefile/IMG_3070.jpeg"alt="Me" width="auto" height="auto">
                 <h3> Hi! I'm Faye </h3>
                     <p>
                         A photography student with a heart full of pixels and a camera full of stories.
@@ -58,8 +86,6 @@
                         After all, the best shots are the ones we take while figuring things out!
                     </p>
                 <footer>
-                    <!-- line above footer content -->
-                    <hr>
                         <!-- top footer section containing quote, logo, and soc icons -->
                         <div class="topFooter">
                             <!-- left side: quote, About Us, and Resources links-->
@@ -111,5 +137,40 @@
                     <h4 class="copyright">&copy; All rights reserved. 2025 Febe Apaya</h4>
                 </footer>
             <script src="script.js"></script>
+                <script>
+                    const popup = document.getElementById('contactPopup');
+                    let isDragging = false;
+                    let offsetX = 0,
+                        offsetY = 0;
+
+                    function openContact() {
+                        popup.style.display = 'block';
+                    }
+
+                    function closeContact() {
+                        popup.style.display = 'none';
+                    }
+
+                    function startDrag(e) {
+                        isDragging = true;
+                        offsetX = e.clientX - popup.offsetLeft;
+                        offsetY = e.clientY - popup.offsetTop;
+                        document.addEventListener('mousemove', drag);
+                        document.addEventListener('mouseup', stopDrag);
+                    }
+
+                    function drag(e) {
+                        if (isDragging) {
+                        popup.style.left = e.clientX - offsetX + 'px';
+                        popup.style.top = e.clientY - offsetY + 'px';
+                        }
+                    }
+
+                    function stopDrag() {
+                        isDragging = false;
+                        document.removeEventListener('mousemove', drag);
+                        document.removeEventListener('mouseup', stopDrag);
+                    }
+                    </script>
         </body>
 </html>
