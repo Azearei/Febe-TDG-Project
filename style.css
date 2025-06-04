@@ -88,9 +88,8 @@ footer {
     width: 45px;
     height: 45px;
     line-height: 45px;
-    margin: 0 10px;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 50px;
     transition: all 0.3s ease;
     text-align: center;
     box-shadow: 0 0 5px transparent; 
