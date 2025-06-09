@@ -1,7 +1,7 @@
 /* Import custom font */
 @import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
 
-/* Top bar styles */
+/* top bar styles */
 .topbar {
   background-color: #403F48;
   color: #e9e4e6;
@@ -94,7 +94,17 @@
   border-radius: 0;
 }
 
-/* Close button */
+/* popup image */
+.popup-img {
+  display: block;
+  margin: 10px auto;
+  border: 2px solid #0653b9;
+  border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* close button */
 .close-btn {
   background: none;
   border: none;
@@ -103,27 +113,25 @@
   cursor: pointer;
 }
 
-/* Popup content */
+/* popup content */
 .popup-body {
-  padding: 20px;
+  padding: 15px;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
+  line-height: 1.2;
+}
+.popup p {
+  margin: 10px 0;
+}
+.popup-body h2 {
+  font-size: 16px;
+  margin-bottom: 12px;
 }
 
 .popup-body a {
   color: #0653b9;
   font-weight: lighter;
   text-decoration: none;
-}
-
-.email-btn {
-  background-color: #0653b9;
-  color:#e9e4e6;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 12px;
 }
 
 /* portfolio design in homepage */

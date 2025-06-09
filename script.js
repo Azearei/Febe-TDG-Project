@@ -16,3 +16,4 @@ galleryImages.forEach(img => {
 galleryClose.addEventListener("click", () => {
   galleryPopup.style.display = "none";
 });
+
