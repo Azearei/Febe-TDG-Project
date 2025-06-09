@@ -1,5 +1,6 @@
 /* Import custom font */
 @import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* Top bar styles */
 .topbar {
@@ -12,7 +13,7 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-
+/* logo */
 .logo-image img{
   width: 5%;
   height: 5%;
@@ -127,6 +128,32 @@
   cursor: pointer;
   margin-top: 12px;
 }
+
+
+/* portfolio design in html */
+.portfolio_grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.portfolio_grid img {
+  width: 400px;
+  height: 300px;
+  border: 2px solid #B5CDFF;
+  border-radius: 13px;
+  box-shadow: 4px 7px 7px 0px #403F48;
+  cursor: pointer;
+  margin: 10px;
+  transition: 400ms;
+}
+
+.portfolio_grid img:hover {
+  filter: grayscale(1);
+  transform: scale(1.03);
+}
+/* portfolio design in html */
 
 
 /* for footer bg */
