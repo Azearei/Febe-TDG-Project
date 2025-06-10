@@ -1,5 +1,8 @@
 /* Import custom font */
 @import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
+body{
+  background-color: #C13584;
+}
 
 /* top bar styles */
 .topbar {
@@ -8,7 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
+  padding: 30px 30px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -20,7 +23,7 @@
 }
 
 .about-link a {
-  font-size: 16px;
+  font-size: 20px;
   color: #e9e4e6;
   text-decoration: none;
 }
@@ -30,6 +33,7 @@
   display: flex;
   align-items: center;
   padding: 20px 30px 10px 30px;
+  background-color: #e9e4e6;
 }
 
 .header-title h1 {
@@ -51,6 +55,7 @@
   display: flex;
   gap: 20px;
   padding: 10px 30px 30px 30px;
+  background-color: #e9e4e6;
 }
 
 .nav-buttons a {
@@ -317,18 +322,18 @@ footer {
 
 /* right side of top footer w logo placeholder and soc icons */
 .logo-icons-right {
-  flex: 1 1 30%;
+  flex: 1 1 20%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
 /* logo splaceholder styling */
-.logoPlaceholder {
+.logoPlaceholder img{
   font-size: 18px;
   color: #e9e4e6;
-  margin-bottom: 10px;
-  text-align: right;
+  width: 30%;
+  height: 30%;
 }
 
 /* wrapper for 'about us and resources sections' */
