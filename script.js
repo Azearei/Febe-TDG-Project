@@ -1,4 +1,4 @@
-// gallery pop up functionality //
+// <-- gallery pop up functionality --> //
 const galleryPopup = document.getElementById("gallery-popup");
 const galleryPopupImg = document.getElementById("gallery-popup-img");
 const galleryImages = document.querySelectorAll(".portfolio img");
@@ -17,3 +17,4 @@ galleryClose.addEventListener("click", () => {
   galleryPopup.style.display = "none";
 });
 
+// <-- theme toggle button functionality --> //

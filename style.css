@@ -1,29 +1,98 @@
 /* Import custom font */
 @import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
-body{
-  background-color: #C13584;
+
+body {
+background-color: #C13584;
+padding: 0% 20%;
+margin: 0%;
+display: flex;
+flex-direction: column;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 5rem;
+  color: #e9e4e6;
+  cursor: pointer;
+  margin-right: 2vw;
+  transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  color: #C13584;
+}
+
+
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+body.dark-mode .page-container,
+body.dark-mode .nav-buttons,
+body.dark-mode .popup,
+body.dark-mode footer,
+body.dark-mode .topbar {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .page-container, 
+body.dark-mode footer, 
+body.dark-mode .topbar {
+  border: 2px solid #ffffff;
+}
+
+body.dark-mode .nav-buttons a {
+  background-color: #555;
+  color: #ffffff;
+}
+
+body.dark-mode .resourcesGrid a:hover {
+  color: #C13584;
+}
+
+body.dark-mode .socialIcons .instagram:hover { color: #C13584; }
+body.dark-mode .socialIcons .facebook:hover { color: #0653b9; }
+body.dark-mode .socialIcons .tiktok:hover { color: #000000; }
+
+.page-container {
+  background-color: #e9e4e6;
+  border: 2px solid #403F48;
+  padding: 0 3vw;
+  box-sizing: border-box;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* top bar styles */
 .topbar {
   background-color: #403F48;
-  color: #e9e4e6;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 30px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 2vw;
+  border-top-right-radius: 2vw;
+  padding: 0.5vw 1vw;
+  border: 2px solid #403F48;
 }
+
 /* logo */
-.logo-image img{
-  width: 5%;
-  height: 5%;
+.logo-image img {
+  width: 3vw;
+  height: auto;
   border-radius: 50%;
 }
 
-.about-link a {
-  font-size: 20px;
+.homepage a {
+  font-size: 1.2rem;
   color: #e9e4e6;
   text-decoration: none;
 }
@@ -32,130 +101,132 @@ body{
 .header-title {
   display: flex;
   align-items: center;
-  padding: 20px 30px 10px 30px;
-  background-color: #e9e4e6;
+  justify-content: center;
+  padding: 1.5vw 0 1vw 0;
 }
 
 .header-title h1 {
   font-family: 'Island Moments', cursive;
-  font-size: 26px;
+  font-size: 3vw;
   margin: 0;
-  margin-right: 20px;
+  margin-right: 2%;
   font-weight: normal;
 }
 
 .header-title hr {
   flex: 1;
+  height: 2px;
   border: none;
-  border-top: 1px solid #403F48;
+  border-top: 0.1vw solid #403F48;
 }
 
-/* Navigation buttons */
+/* navbar buttons */
 .nav-buttons {
   display: flex;
-  gap: 20px;
-  padding: 10px 30px 30px 30px;
-  background-color: #e9e4e6;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1vw;
+  margin: 1.5vw 0 3vw 0;
+  max-width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
 }
 
 .nav-buttons a {
+  flex: 1 1 20%;
   background-color: #403F48;
   color: #e9e4e6;
-  padding: 10px 20px;
+  padding: 0.6rem 1rem;
   text-decoration: none;
-  border: none;
   font-size: 14px;
+  margin: 0 0.5vw;
+  text-align: center;
   transition: background 0.3s;
 }
 
 .nav-buttons a:hover {
-  background-color: #403F48;
+  background-color: #5a5861;
 }
+
 /* Contact popup styling */
 .popup {
   position: absolute;
-  top: 120px;
-  left: 120px;
-  width: 350px;
+  top: 10%;
+  left: 10%;
+  width: 30%;
   background-color: #e9e4e6;
-  border: 2px solid #403F48;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 0.2vw solid #403F48;
+  border-radius: 1vw;
+  box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.3);
   z-index: 999;
   display: none;
   font-family: sans-serif;
   overflow: hidden;
 }
 
-/* Draggable top bar */
 .popup-header {
   background-color: #403F48;
   color: #e9e4e6;
-  padding: 10px 15px;
+  padding: 1vw;
   cursor: move;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 0;
 }
 
-/* popup image */
 .popup-img {
   display: block;
-  margin: 10px auto;
-  border: 2px solid #0653b9;
-  border-radius: 5px;
+  margin: 1vw auto;
+  border: 0.2vw solid #0653b9;
+  border-radius: 0.5vw;
   max-width: 100%;
   height: auto;
 }
 
-/* close button */
 .close-btn {
   background: none;
   border: none;
   color: #e9e4e6;
-  font-size: 18px;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 
-/* popup content */
 .popup-body {
-  padding: 15px;
+  padding: 1vw;
   text-align: center;
-  font-size: 12px;
-  line-height: 1.2;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
-.popup p {
-  margin: 10px 0;
-}
+
 .popup-body h2 {
-  font-size: 16px;
-  margin-bottom: 12px;
+  font-size: 1.1rem;
+  margin-bottom: 0.8vw;
 }
 
 .popup-body a {
   color: #0653b9;
-  font-weight: lighter;
   text-decoration: none;
 }
 
-/* portfolio design in homepage */
+/* portfolio design */
 .portfolio_grid {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  max-width: 100%;
 }
 
 .portfolio_grid img {
-  width: 400px;
-  height: 300px;
-  border: 2px solid #B5CDFF;
-  border-radius: 13px;
-  box-shadow: 4px 7px 7px 0px #403F48;
+  width: 18vw;
+  height: auto;
+  border: 0.2vw solid #B5CDFF;
+  border-radius: 1vw;
+  box-shadow: 0.5vw 0.7vw 0.7vw 0px #403F48;
   cursor: pointer;
-  margin: 10px;
-  transition: 400ms;
+  margin: 1vw;
+  transition: transform 0.4s, filter 0.4s;
 }
 
 .portfolio_grid img:hover {
@@ -163,242 +234,203 @@ body{
   transform: scale(1.03);
 }
 
-/* portfolio design in html */
+/* gallery popup */
 .gallery-popup {
   display: none;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #403F48;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
 .gallery-popup-content {
-  max-width: 90%;
-  max-height: 80%;
-  border-radius: 10px;
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 1vw;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.6);
 }
 
 .gallery-close {
   position: absolute;
-  top: 30px;
-  right: 40px;
-  font-size: 40px;
-  color: #e9e4e6;
+  top: 2vw;
+  right: 3vw;
+  font-size: 2.5rem;
+  color: white;
   cursor: pointer;
+  z-index: 10000;
 }
 
-/* portfolio gallery grid */
 .portfolio {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  max-width: 1000px;
+  grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+  gap: 2vw;
+  max-width: 80vw;
   margin: auto;
-  padding: 20px;
+  padding: 1vw;
 }
 
-/* images inside the gallery */
 .portfolio img {
   width: 100%;
   height: auto;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 1vw;
   transition: transform 0.3s ease;
+  box-shadow: 0.3vw 0.5vw 0.5vw #403F48;
 }
 
 .portfolio img:hover {
   transform: scale(1.05);
 }
 
-/* gallery popup (enlarged image view) */
-.gallery-popup {
-  display: none; 
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.85);
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.gallery-popup-content {
-  max-width: 90vw; 
-  max-height: 90vh; 
-  height: auto;
-  object-fit: contain; /* keeps image proportions */
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
-}
-
-.gallery-close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 40px;
-  color: white;
-  cursor: pointer;
-  z-index: 10000;
-}
-
-
-
-/* for footer bg */
+/* footer */
 footer {
-    background-color: #403F48;
-    border-radius: 0 0 10px 10px; 
-    overflow: hidden;
+  border-bottom-left-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+  background-color: #403F48;
+  border-radius: 0 0 1vw 1vw;
+  border: 2px solid #403F48;
+  overflow: hidden;
 }
 
-/* container for soc med icons */
 .socialIcons {
-    display: flex;
-    justify-content: right;
-    text-align: center;
-    padding: 20px 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 2vw 0;
 }
 
-/* individual soc icon style */
 .socialIcons .icon {
-    display: inline-block;
-    background-color: #403F48;
-    color: #e9e4e6;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    border-radius: 50%;
-    font-size: 50px;
-    transition: all 0.3s ease;
-    text-align: center;
-    box-shadow: 0 0 5px transparent; 
+  color: #e9e4e6;
+  width: 2.5vw;
+  height: 2.5vw;
+  line-height: 3vw;
+  border-radius: 50%;
+  font-size: 4vw;
+  transition: all 0.3s ease;
+  text-align: center;
 }
 
-/* color padding inside soc icons */
 .socialIcons a {
-    text-decoration: none;
-    padding: 10px;
-    color: #e9e4e6;
-    margin: 10px;
+  text-decoration: none;
+  padding: 1vw;
+  margin: 1vw;
 }
 
-/* hover effects */
 .socialIcons .icon:hover {
-    transform: scale(1.2);
-    background-color: transparent;
+  transform: scale(1.2);
 }
 
 .socialIcons .icon:hover i {
-    color: inherit;
-    filter: drop-shadow(0 0 2px #e9e4e6) drop-shadow(0 0 2px #e9e4e6);
-    transition: filter 0.3s ease;
+  color: inherit;
+  filter: drop-shadow(0 0 2px #e9e4e6) drop-shadow(0 0 2px #e9e4e6);
+  transition: filter 0.3s ease;
 }
 
-/* hover colours based on soc med colours */
 .socialIcons .instagram:hover { color: #C13584; }
 .socialIcons .facebook:hover { color: #0653b9; }
 .socialIcons .tiktok:hover { color: #000000; }
 
-/* top footer area: quote and logo +soc icons in flex with space between */
 .topFooter {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 30px;
+  padding: 2vw;
   flex-wrap: wrap;
 }
 
-/* left side of top footer with quote and sections */
 .quote-logo-left {
   flex: 1 1 60%;
   color: #e9e4e6;
 }
 
-/* right side of top footer w logo placeholder and soc icons */
 .logo-icons-right {
   flex: 1 1 20%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-/* logo splaceholder styling */
-.logoPlaceholder img{
-  font-size: 18px;
-  color: #e9e4e6;
+.logo-icons-right .socialIcons {
+  order: 1;
+}
+
+.logo-icons-right .logoPlaceholder {
+  order: 2;
+  margin-top: 1vw;
+}
+
+.logoPlaceholder img {
   width: 30%;
-  height: 30%;
+  height: auto;
+  size: 10%;
 }
 
-/* wrapper for 'about us and resources sections' */
 .about-resources {
-  margin-top: 30px;
+  margin-top: 2vw;
 }
 
-/* spaces for 'about us' section */
 .aboutSection {
-  margin-bottom: 25px;
+  margin-bottom: 2vw;
 }
 
-/* headings inside 'about us and resources' */
 .aboutSection h4,
 .resourcesSection h4 {
   color: #e9e4e6;
-  margin-bottom: 10px;
-  font-size: 16px;
+  margin-bottom: 1vw;
+  font-size: 1rem;
 }
 
-/* remove default list styles for 'about us' section */
 .aboutSection ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* 'about us' list items styling */
 .aboutSection ul li {
-  margin: 4px 0;
-  font-size: 14px;
+  margin: 0.5vw 0;
+  font-size: 0.9rem;
 }
 
-/* grid layout for 'resources links' */
 .resourcesGrid {
   display: grid;
   grid-template-columns: repeat(4, auto);
-  gap: 6px 20px;
-  margin-top: 10px;
+  gap: 1vw 2vw;
+  margin-top: 1vw;
 }
 
-/* 'resources links' styling */
 .resourcesGrid a {
   color: #e9e4e6;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.9rem;
   transition: color 0.3s ease;
 }
 
-/* hover effect on resource links */
 .resourcesGrid a:hover {
   color: #ffffff;
   text-decoration: underline;
 }
 
-/* copyright text styling */
 .copyright {
   text-align: center;
-  padding: 20px 0;
+  padding: 2vw 0;
   color: #e9e4e6;
-  font-size: 14px;
+  font-size: 0.9rem;
 }
 
-/* responsive ix */
-@media (max-width: 768px) {
+.quote-logo-left h2 {
+  font-family: 'Island Moments', cursive;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 3vw;
+}
+
+@media (max-width: 600px) {
   .topFooter {
     flex-direction: column;
     align-items: center;
@@ -407,7 +439,7 @@ footer {
 
   .logo-icons-right {
     align-items: center;
-    margin-top: 20px;
+    margin-top: 2vw;
   }
 
   .resourcesGrid {
@@ -417,11 +449,16 @@ footer {
   .aboutSection, .resourcesSection {
     text-align: center;
   }
-}
 
-.quote-logo-left h2 {
-    font-family: 'Island Moments', cursive;
-    font-style: italic;  
-    font-weight: normal;
-    font-size: 40px;
+  .nav-buttons {
+    flex-direction: column;
+    max-width: 80vw;
+    gap: 10px;
+  }
+
+  .nav-buttons a {
+    flex: 1 1 auto;
+    width: 100%;
+    margin: 0;
+  }
 }

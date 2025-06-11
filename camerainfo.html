@@ -1,212 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,
-    initial-scaled=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--Non Visible Content-->
-        <title> Camera Information </title>
-        <style>
-            /* This is where CSS Grids Go */
-        </style>
-</head>
-    <header>
-        <!-- Top navigation bar -->
-        <div class="topbar">
-            <div class="logo-image"><a href="homepage.html"><img src="imagefile/7eeddb92-7d2a-4e47-ab45-4cb7cb561ebf-removebg-preview.png"></a></div>
-            <div class="about-link"><a href="aboutpopup.html">About</a></div>
-        </div>
-
-        <!-- Title section -->
-        <div class="header-title">
-            <h1>Camera Information</h1>
-            <hr>
-        </div>
-
-        <!-- Navigation buttons -->
-        <div class="nav-buttons">
-            <a href="camerainfo.html">Camera Info</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="#" onclick="openContact()">Contact</a>
-        </div>
-
-        <!-- Contact Popup -->
-        <div id="contactPopup" class="popup">
-            <div class="popup-header" onmousedown="startDrag(event)">
-                <span>Contact</span>
-                <button onclick="closeContact()" class="close-btn">[ x ]</button>
-            </div>
-        <div class="popup-body">
-            <h2>Yay! Thank you for visiting my site!</h2>
-            <p>
-                If you would like to contact me, email me at:
-            </p>
-            <img src="imagefile/9bc93545-50a8-4e39-bc67-b159d4e3749a.jpg" alt="popup image" class="popup-img">
-            <p>
-                <a href="mailto:fap23506@hghs.school.nz">fap23506@hghs.school.nz</a>
-            </p>
-
-        <hr>
-            <p>
-                Major props to my model:<br>
-                Rhanzi Kent Juanio, for being the ultimate photography subject while<br>
-                I’m learning the ropes!All these photos were taken by me<br>
-                (yes, I’m bragging a little), but they wouldn’t exist without<br>
-                his patience in front of my camera - and his generosity in letting<br>
-                me feature them here.<br>
-            </p>
-                <a href="mailto:fap23506@hghs.school.nz"></a>
-            </div>
-        </div>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scaled=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!--Non Visible Content-->
+            <title> Camera Information </title>
+            <style>
+                /* This is where CSS Grids Go */
+            </style>
+    </head>
         <body>
-            <!--Visible Content-->
-                <img src="imagefile/cam info/1_cam_info.jpg" alt="Name" width="500" height="333">
-                    <h5></h5>
-                <h3>What is a camera?</h3>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fa-solid fa-moon" id="theme-toggle"></i>
+                </button>
+
+                <!-- top navigation bar -->
+                <div class="topbar">
+                    <div class="homepage"><a href="main.html">home</a></div>
+                    <div class="logo-image"><a href="personal.html"><img src="imagefile/7eeddb92-7d2a-4e47-ab45-4cb7cb561ebf-removebg-preview.png"></a></div>
+                </div>
+
+            <div class="page-container">
+
+                    <div class="header-title">
+                        <h1>Camera Information</h1>
+                        <hr>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="camerainfo.html">Camera Info</a>
+                        <a href="portfolio.html">Portfolio</a>
+                        <a href="#" onclick="openContact()">Contact</a>
+                    </div>
+                </div>
+
+
+                <!-- Contact Popup -->
+                <div id="contactPopup" class="popup">
+                    <div class="popup-header" onmousedown="startDrag(event)">
+                        <span>Contact</span>
+                        <button onclick="closeContact()" class="close-btn">[ x ]</button>
+                    </div>
+                <div class="popup-body">
+                    <h2>Yay! Thank you for visiting my site!</h2>
                     <p>
-                        Imagine a tiny magic box that can steal moments right out of real life and keep<br>
-                        them forever, that’s basically what a camera means to me.
+                        If you would like to contact me, email me at:
+                    </p>
+                    <img src="imagefile/9bc93545-50a8-4e39-bc67-b159d4e3749a.jpg" alt="popup image" class="popup-img">
+                    <p>
+                        <a href="mailto:fap23506@hghs.school.nz">fap23506@hghs.school.nz</a>
                     </p>
 
+                <hr>
                     <p>
-                        Technically, it’s a device that captures light through a lens and turns what you<br>
-                        see into a photo or video. But the cool part? It’s like a time machine for emotions.<br>
-                        One click can save a laugh, a sunset, or even your dog’s derpy face mid-zoomies. Lol
+                        Major props to my model:<br>
+                        Rhanzi Kent Juanio, for being the ultimate photography subject while<br>
+                        I’m learning the ropes!All these photos were taken by me<br>
+                        (yes, I’m bragging a little), but they wouldn’t exist without<br>
+                        his patience in front of my camera - and his generosity in letting<br>
+                        me feature them here.<br>
                     </p>
+                        <a href="mailto:fap23506@hghs.school.nz"></a>
+                    </div>
+                </div>
+                    <!--Visible Content-->
+                        <img src="imagefile/cam info/1_cam_info.jpg" alt="Name" width="500" height="333">
+                            <h5></h5>
+                        <h3>What is a camera?</h3>
+                            <p>
+                                Imagine a tiny magic box that can steal moments right out of real life and keep<br>
+                                them forever, that’s basically what a camera means to me.
+                            </p>
 
-                    <p>
-                        Cameras aren’t just gadgets, they’re tools for telling stories without words.<br>
-                        And hey, even your phone has one! So we can all be photographers now. :)
-                    </p>
-                <img src="imagefile/cam info/2_cam_info.jpg" alt="Name" width="500" height="333">
-                    <h5></h5>
-                <h3>How does the camera work?</h3>
-                    <p>
-                        In a film camera, light passes through the lens and hits the photosensitive film inside the camera.<br>
-                        The film is coated with light-sensitive chemicals that react to the incoming light, capturing an image<br>
-                        as a latent (invisible) image. 
-                    </p>
-                    <p>
-                        Process:<br>
-                        - Exposure: When you take a picture, light hits the film, causing a chemical reaction that records the image.<br>
-                        - Developing: The film is submerged in a series of chemical baths to make the image visible.<br>
-                        - Fixing: A fixer chemical stabilizes the image, preventing further exposure to light.<br>
-                        - Printing: If the film is negative (common in traditional film photography), it is used<br>
-                        to create a positive print on light-sensitive paper.<br>
-                    </p>
-                    <p>
-                        In digital camera, it works similarly to a film camera but replaces film with an image sensor (either CMOS or CCD)
-                    </p>
-                    <p>
-                        Light enters the lens— the lens focuses light onto the image sensor.<br>
-                        Image sensor captures the light—- the sensor, made up of millions of<br>
-                        tiny photosites (pixels), converts light into an electrical signal.<br>
-                        Image processing—- the camera's image processor (such as Canon’s DIGIC or Sony’s BIONZ)<br>
-                        processes the raw sensor data, adjusting brightness, contrast, and colour.<br>
-                        Image Storage— the processed image is saved as a JPED, RAW, or other format on a memory card/SD card.<br>
-                    </p>
-                    <p>
-                        Real-Time Display— unlike film cameras, digital cameras allow you to view the image immediately on the<br>
-                        LCD screen or electronic viewfinder.
-                    </p>
-                <img src="imagefile/cam info/3_cam_info.jpg" alt="Name" width="500" height="333">
-                    <h5></h5>
-                <h3>When was the first camera ever made?</h3>
-                    <p>
-                        Joseph Nicephore’s heliograph was the first successful attempt at capturing an image using a camera obscura<br>
-                        and a light-sensitive material, though the process required extremely long exposure times. His most famous<br>
-                        surviving image, View from the Window at Le Gras (1826 or 1827), is the earliest known permanent photograph. 
-                    </p>
-                    <p>
-                        Louis Daguerre built upon Niepce’s work and, in 1839, introduced the daguerreotype process. It significantly<br>
-                        reduced exposure times and produced sharper, more detailed images on silver-plated copper sheets.<br>
-                        The daguerreotype became the first widely adopted photographic technique, marking the true beginning of modern photography.
-                    </p>
-                <img src="imagefile/cam info/4_cam_info.jpeg" alt="Name" width="500" height="333">
-                    <h5></h5>
-                <h3>Why do people not want to be photographed?</h3>
-                    <p>
-                        I made a survey through Google Forms for my schoolmates' voices. Based on 125 students that answered the survey are:<br>
-                        36.8% of people liked being photographed because most of them are interested in photography and have confidence in<br>
-                        themselves. Meanwhile, 40% of people don't like being photographed because they are self-conscious, uncomfortable,<br>
-                        shy, and sometimes they just prefer being the one getting behind the camera rather than the art themselves. Lastly,<br>
-                        22.4% of people don't mind getting pictures taken because they are more likely to just want to go with the flow and<br>
-                        sometimes it depends on the situations or people who will take their photos.
-                    </p>
-                <img src="" alt="Name" width="500" height="333">
-                    <h5></h5>
-                <h3>What is photography about and what special about it?</h3>
-                    <p>
-                        Photography is a powerful form of communication that transcends cultural and linguistic barriers, acting as a universal language.<br>
-                        In today’s digital era, social media platforms like Instagram and Snapchat have amplified its influence, enabling people to share<br>
-                        experiences and emotions instantly. Photography not only captures moments but also fosters connections, promotes empathy, and highlights<br>
-                        social issues, such as environmental protection. As the world becomes increasingly globalized, photography remains a crucial tool for<br>
-                        storytelling, reflecting societal trends, and evolving with time.
-                    </p>
-                <img src="" alt="Name" width="500" height="333">
-                    <h5></h5>
-                <h3>Why should people learn about photography?</h3>
-                    <p>
-                        Learning photography skills is valuable because it enhances both personal and professional opportunities. In marketing and advertising,<br>
-                        high-quality images are essential for attracting customers, building brand identity, and communicating messages effectively.<br>
-                        Understanding photography allows individuals and businesses to create visually appealing content, which is crucial in today’s<br>
-                        digital and competitive world.
-                    </p>
-                    <p>
-                        Beyond marketing, photography is a powerful form of creative self-expression. Just as renowned photographers like Erick Chmil<br>
-                        use images to tell compelling stories, anyone can use photography to capture meaningful moments, share unique perspectives,<br>
-                        and develop their artistic vision. Whether for professional growth, personal storytelling, or simply documenting everyday life,<br>
-                        learning the basics of photography empowers people to communicate visually in a more impactful way. 
-                    </p>
-                <img src="" alt="Name" width="500" height="333">
-                    <h5></h5>
-                <h3>How photography helps people in their daily life?</h3>
-                    <p>
-                        Photography plays an important role in people’s daily lives by allowing them to shape and express their identities,<br>
-                        document meaningful moments, and connect with others. Self-portraits, or selfies, have become a major part of online culture,<br>
-                        helping individuals present themselves in ways that reflect their personalities and aspirations. Beyond self-expression,<br>
-                        photography also enables people to challenge stereotypes and celebrate diversity. By capturing and sharing images that<br>
-                        represent different perspectives, individuals can contribute to social awareness and advocate for equality.<br>
-                        Moreover, photography influences how we see ourselves and others, shaping perceptions and emotions both consciously<br> 
-                        and unconsciously.
-                    </p>
-                    <p>
-                        On a personal level, photography helps people preserve memories, tell stories, and reflect on their experiences.<br>
-                        Whether through professional photography or casual snapshots, images serve as a powerful tool for communication,<br>
-                        self-discovery, and personal growth. In a rapidly changing world, photography remains an essential medium for<br>
-                        defining identity and fostering connections in everyday life.
-                    </p>
-                <img src="" alt="Name" width="500" height="333">
-                    <h5></h5>
-                <h3>Why is photography a great hobby for self-expression and creativity?</h3>
-                    <p>
-                        Photography offers numerous benefits—especially for children; fostering creativity, observation skills,<br>
-                        self-expression, and confidence. It teaches patience, discipline, and storytelling while enhancing<br> 
-                        technical proficiency and appreciation for the arts. Photography also encourages a connection to nature,<br>
-                        creates lasting memories, promotes social interaction, and can even lead to future career opportunities.
-                    </p>
-                <img src="" alt="Name" width="500" height="333">
-                    <h5></h5>
-                <h3>How can I improve my photography skills?</h3>
-                    <p>
-                        In order to improve the skills in photography, high-quality equipment and rising popularity in social media<br>
-                        can make it easier.
-                    </p>
-                <img src="" alt="Name" width="500" height="333">
-                    <h5></h5>
-                <h3>What personal benefits can photography bring to someone’s life?</h3>
-                    <p>
-                        Photography allows people to express themselves, increase their skills in technology, to also show off the cool pictures<br>
-                        and videos to impress friends and family, and more new career opportunities.
-                    </p>
+                            <p>
+                                Technically, it’s a device that captures light through a lens and turns what you<br>
+                                see into a photo or video. But the cool part? It’s like a time machine for emotions.<br>
+                                One click can save a laugh, a sunset, or even your dog’s derpy face mid-zoomies. Lol
+                            </p>
 
+                            <p>
+                                Cameras aren’t just gadgets, they’re tools for telling stories without words.<br>
+                                And hey, even your phone has one! So we can all be photographers now. :)
+                            </p>
+                        <img src="imagefile/cam info/2_cam_info.jpg" alt="Name" width="500" height="333">
+                            <h5></h5>
+                        <h3>How does the camera work?</h3>
+                            <p>
+                                In a film camera, light passes through the lens and hits the photosensitive film inside the camera.<br>
+                                The film is coated with light-sensitive chemicals that react to the incoming light, capturing an image<br>
+                                as a latent (invisible) image. 
+                            </p>
+                            <p>
+                                Process:<br>
+                                - Exposure: When you take a picture, light hits the film, causing a chemical reaction that records the image.<br>
+                                - Developing: The film is submerged in a series of chemical baths to make the image visible.<br>
+                                - Fixing: A fixer chemical stabilizes the image, preventing further exposure to light.<br>
+                                - Printing: If the film is negative (common in traditional film photography), it is used<br>
+                                to create a positive print on light-sensitive paper.<br>
+                            </p>
+                            <p>
+                                In digital camera, it works similarly to a film camera but replaces film with an image sensor (either CMOS or CCD)
+                            </p>
+                            <p>
+                                Light enters the lens— the lens focuses light onto the image sensor.<br>
+                                Image sensor captures the light—- the sensor, made up of millions of<br>
+                                tiny photosites (pixels), converts light into an electrical signal.<br>
+                                Image processing—- the camera's image processor (such as Canon’s DIGIC or Sony’s BIONZ)<br>
+                                processes the raw sensor data, adjusting brightness, contrast, and colour.<br>
+                                Image Storage— the processed image is saved as a JPED, RAW, or other format on a memory card/SD card.<br>
+                            </p>
+                            <p>
+                                Real-Time Display— unlike film cameras, digital cameras allow you to view the image immediately on the<br>
+                                LCD screen or electronic viewfinder.
+                            </p>
+                        <img src="imagefile/cam info/3_cam_info.jpg" alt="Name" width="500" height="333">
+                            <h5></h5>
+                        <h3>When was the first camera ever made?</h3>
+                            <p>
+                                Joseph Nicephore’s heliograph was the first successful attempt at capturing an image using a camera obscura<br>
+                                and a light-sensitive material, though the process required extremely long exposure times. His most famous<br>
+                                surviving image, View from the Window at Le Gras (1826 or 1827), is the earliest known permanent photograph. 
+                            </p>
+                            <p>
+                                Louis Daguerre built upon Niepce’s work and, in 1839, introduced the daguerreotype process. It significantly<br>
+                                reduced exposure times and produced sharper, more detailed images on silver-plated copper sheets.<br>
+                                The daguerreotype became the first widely adopted photographic technique, marking the true beginning of modern photography.
+                            </p>
+                        <img src="imagefile/cam info/4_cam_info.jpeg" alt="Name" width="500" height="333">
+                            <h5></h5>
+                        <h3>Why do people not want to be photographed?</h3>
+                            <p>
+                                I made a survey through Google Forms for my schoolmates' voices. Based on 125 students that answered the survey are:<br>
+                                36.8% of people liked being photographed because most of them are interested in photography and have confidence in<br>
+                                themselves. Meanwhile, 40% of people don't like being photographed because they are self-conscious, uncomfortable,<br>
+                                shy, and sometimes they just prefer being the one getting behind the camera rather than the art themselves. Lastly,<br>
+                                22.4% of people don't mind getting pictures taken because they are more likely to just want to go with the flow and<br>
+                                sometimes it depends on the situations or people who will take their photos.
+                            </p>
+                        <img src="" alt="Name" width="500" height="333">
+                            <h5></h5>
+                        <h3>What is photography about and what special about it?</h3>
+                            <p>
+                                Photography is a powerful form of communication that transcends cultural and linguistic barriers, acting as a universal language.<br>
+                                In today’s digital era, social media platforms like Instagram and Snapchat have amplified its influence, enabling people to share<br>
+                                experiences and emotions instantly. Photography not only captures moments but also fosters connections, promotes empathy, and highlights<br>
+                                social issues, such as environmental protection. As the world becomes increasingly globalized, photography remains a crucial tool for<br>
+                                storytelling, reflecting societal trends, and evolving with time.
+                            </p>
+                        <img src="" alt="Name" width="500" height="333">
+                            <h5></h5>
+                        <h3>Why should people learn about photography?</h3>
+                            <p>
+                                Learning photography skills is valuable because it enhances both personal and professional opportunities. In marketing and advertising,<br>
+                                high-quality images are essential for attracting customers, building brand identity, and communicating messages effectively.<br>
+                                Understanding photography allows individuals and businesses to create visually appealing content, which is crucial in today’s<br>
+                                digital and competitive world.
+                            </p>
+                            <p>
+                                Beyond marketing, photography is a powerful form of creative self-expression. Just as renowned photographers like Erick Chmil<br>
+                                use images to tell compelling stories, anyone can use photography to capture meaningful moments, share unique perspectives,<br>
+                                and develop their artistic vision. Whether for professional growth, personal storytelling, or simply documenting everyday life,<br>
+                                learning the basics of photography empowers people to communicate visually in a more impactful way. 
+                            </p>
+                        <img src="" alt="Name" width="500" height="333">
+                            <h5></h5>
+                        <h3>How photography helps people in their daily life?</h3>
+                            <p>
+                                Photography plays an important role in people’s daily lives by allowing them to shape and express their identities,<br>
+                                document meaningful moments, and connect with others. Self-portraits, or selfies, have become a major part of online culture,<br>
+                                helping individuals present themselves in ways that reflect their personalities and aspirations. Beyond self-expression,<br>
+                                photography also enables people to challenge stereotypes and celebrate diversity. By capturing and sharing images that<br>
+                                represent different perspectives, individuals can contribute to social awareness and advocate for equality.<br>
+                                Moreover, photography influences how we see ourselves and others, shaping perceptions and emotions both consciously<br> 
+                                and unconsciously.
+                            </p>
+                            <p>
+                                On a personal level, photography helps people preserve memories, tell stories, and reflect on their experiences.<br>
+                                Whether through professional photography or casual snapshots, images serve as a powerful tool for communication,<br>
+                                self-discovery, and personal growth. In a rapidly changing world, photography remains an essential medium for<br>
+                                defining identity and fostering connections in everyday life.
+                            </p>
+                        <img src="" alt="Name" width="500" height="333">
+                            <h5></h5>
+                        <h3>Why is photography a great hobby for self-expression and creativity?</h3>
+                            <p>
+                                Photography offers numerous benefits—especially for children; fostering creativity, observation skills,<br>
+                                self-expression, and confidence. It teaches patience, discipline, and storytelling while enhancing<br> 
+                                technical proficiency and appreciation for the arts. Photography also encourages a connection to nature,<br>
+                                creates lasting memories, promotes social interaction, and can even lead to future career opportunities.
+                            </p>
+                        <img src="" alt="Name" width="500" height="333">
+                            <h5></h5>
+                        <h3>How can I improve my photography skills?</h3>
+                            <p>
+                                In order to improve the skills in photography, high-quality equipment and rising popularity in social media<br>
+                                can make it easier.
+                            </p>
+                        <img src="" alt="Name" width="500" height="333">
+                            <h5></h5>
+                        <h3>What personal benefits can photography bring to someone’s life?</h3>
+                            <p>
+                                Photography allows people to express themselves, increase their skills in technology, to also show off the cool pictures<br>
+                                and videos to impress friends and family, and more new career opportunities.
+                            </p>
+                </div>
                 <footer>
                         <!-- top footer section containing quote, logo, and soc icons -->
                         <div class="topFooter">
@@ -243,7 +247,7 @@
                             <!-- right side: logo placeholder and soc med icons -->
                             <div class="logo-icons-right">
                                 <!-- logo placeholder text -->
-                                <div class="logoPlaceholder"><a href="homepage.html"><img src="imagefile/7eeddb92-7d2a-4e47-ab45-4cb7cb561ebf-removebg-preview.png"></a></div>
+                                <div class="logoPlaceholder"><a href="homepage.html"><img src="imagefile/7eeddb92-7d2a-4e47-ab45-4cb7cb561ebf-removebg-preview.png"></div>
                                 <!-- soc med icons container -->
                                 <div class="socialIcons">
                                     <a href="https://www.instagram.com/c.fyela" target="_blank" class="icon instagram">
@@ -257,9 +261,10 @@
                         </div>
                     <!-- footer copyright text -->
                     <h4 class="copyright">&copy; All rights reserved. 2025 Febe Apaya</h4>
+                </div>
                 </footer>
-            <script src="script.js"></script>
-                <script>
+        <script src="script.js"></script>
+            <script>
                     const popup = document.getElementById('contactPopup');
                     let isDragging = false;
                     let offsetX = 0,
@@ -293,7 +298,19 @@
                         document.removeEventListener('mousemove', drag);
                         document.removeEventListener('mouseup', stopDrag);
                     }
-                    </script>
 
+                    // <-- toggle themes functionality --> //
+                    function toggleTheme() {
+                        document.body.classList.toggle('dark-mode');
+                        const icon = document.querySelector('.theme-toggle i');
+                        if (document.body.classList.contains('dark-mode')) {
+                            icon.classList.remove('fa-sun');
+                            icon.classList.add('fa-moon');
+                        } else {
+                            icon.classList.remove('fa-moon');
+                            icon.classList.add('fa-sun');
+                        }
+                    }                    
+            </script>                         
         </body>
 </html>
