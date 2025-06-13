@@ -41,7 +41,7 @@
                     <span>contact</span>
                 </a>
 
-                <a href="#" class="icon-button">
+                <a href="#" class="icon-button" onclick="openLinks()">
                     <i class="fas fa-link"></i>
                     <span>links</span>
                 </a>
@@ -57,7 +57,7 @@
                     <!-- Cam Research Popup -->
                     <div id="researchPopup" class="research-popup">
                         <div id="researchPopupHeader" class="research-popup-header" onmousedown="startDrag(event)">
-                            <span>camera info</span>
+                            <span>cam research</span>
                             <button onclick="closeResearch()" class="close-btn">[ x ]</button>
                         </div>
                         <iframe src="camerainfo.html" class="research-popup-iframe" frameborder="0"></iframe>
@@ -84,6 +84,29 @@
                         <img src="imagefile/9bc93545-50a8-4e39-bc67-b159d4e3749a.jpg" alt="popup image" class="contact-popup-img">
                             <a href="mailto:fap23506@hghs.school.nz">fap23506@hghs.school.nz</a>
                         </div>
+                    </div>
+                    <!-- Links Pop up -->
+                    <div id="link-popup" class="link-popup">
+                    <div class="link-popup-header">
+                        <h2>links</h2>
+                        <span class="close-btn">[ x ]</span>
+                    </div>
+                    <div class="link-grid">
+                        <a href="https://www.instagram.com/c.fyela" target="_blank" class="link-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>instagram</span>
+                        </a>
+                        <a href="https://www.facebook.com/febeyaa" target="_blank" class="link-item">
+                        <i class="fa-brands fa-facebook"></i>
+                        <span>facebook</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@_kent1_1" target="_blank" class="link-item">
+                        <i class="fa-brands fa-tiktok"></i>
+                        <span>tiktok</span>
+                        </a>
+                    </div>
+                    <p class="note">clicking any of the links will open a new tab!</p>
+                    </div>
                     </div>
             </header>   
             <script src="script.js"></script>
@@ -198,33 +221,28 @@
                         isDragging = false;
                         document.removeEventListener('mousemove', drag);
                         document.removeEventListener('mouseup', stopDrag);
-                    }
+                    }   
+                    
+                    // <-- links pop up --> //
+                    const linkBtn = document.getElementById("link-btn");
+                    const linkPopup = document.getElementById("link-popup");
+                    const linkCloseBtn = document.getElementById("link-close-btn");
 
-                    //<-- gallery popup elements -->//
-                    const galleryPopup = document.getElementById("gallery-popup");
-                    const galleryPopupImg = document.getElementById("gallery-popup-img");
-                    const galleryClose = document.querySelector(".gallery-close");
-
-                    // select all portfolio images
-                    const portfolioImages = document.querySelectorAll(".portfolio img");
-
-                    // add click event to each image
-                    portfolioImages.forEach(img => {
-                    img.addEventListener("click", () => {
-                        galleryPopup.style.display = "flex";  // Show popup
-                        galleryPopupImg.src = img.src;        // Set popup image src
-                    });
+                    // show popup when button clicked
+                    linkBtn.addEventListener("click", function(e) {
+                    e.preventDefault();  // stop link jump
+                    linkPopup.style.display = "block";
                     });
 
-                    // close button functionality
-                    galleryClose.addEventListener("click", () => {
-                    galleryPopup.style.display = "none";
+                    // hide popup when close button clicked
+                    linkCloseBtn.addEventListener("click", function() {
+                    linkPopup.style.display = "none";
                     });
 
-                    // close popup when clicking outside the image
-                    galleryPopup.addEventListener("click", (e) => {
-                    if (e.target === galleryPopup) {
-                        galleryPopup.style.display = "none";
+                    // click outside popup to close
+                    window.addEventListener("click", function(e) {
+                    if (e.target === linkPopup) {
+                        linkPopup.style.display = "none";
                     }
                     });
             </script>                        
