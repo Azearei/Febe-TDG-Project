@@ -222,29 +222,6 @@
                         document.removeEventListener('mousemove', drag);
                         document.removeEventListener('mouseup', stopDrag);
                     }   
-                    
-                    // <-- links pop up --> //
-                    const linkBtn = document.getElementById("link-btn");
-                    const linkPopup = document.getElementById("link-popup");
-                    const linkCloseBtn = document.getElementById("link-close-btn");
-
-                    // show popup when button clicked
-                    linkBtn.addEventListener("click", function(e) {
-                    e.preventDefault();  // stop link jump
-                    linkPopup.style.display = "block";
-                    });
-
-                    // hide popup when close button clicked
-                    linkCloseBtn.addEventListener("click", function() {
-                    linkPopup.style.display = "none";
-                    });
-
-                    // click outside popup to close
-                    window.addEventListener("click", function(e) {
-                    if (e.target === linkPopup) {
-                        linkPopup.style.display = "none";
-                    }
-                    });
             </script>                        
         </body>
 </html>
