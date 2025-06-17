@@ -86,28 +86,26 @@
                         </div>
                     </div>
                     <!-- Links Pop up -->
-                    <div id="link-popup" class="link-popup">
-                    <div class="link-popup-header">
-                        <h2>links</h2>
-                        <span class="close-btn">[ x ]</span>
-                    </div>
-                    <div class="link-grid">
-                        <a href="https://www.instagram.com/c.fyela" target="_blank" class="link-item">
-                        <i class="fa-brands fa-instagram"></i>
-                        <span>instagram</span>
-                        </a>
-                        <a href="https://www.facebook.com/febeyaa" target="_blank" class="link-item">
-                        <i class="fa-brands fa-facebook"></i>
-                        <span>facebook</span>
-                        </a>
-                        <a href="https://www.tiktok.com/@_kent1_1" target="_blank" class="link-item">
-                        <i class="fa-brands fa-tiktok"></i>
-                        <span>tiktok</span>
-                        </a>
-                    </div>
-                    <p class="note">clicking any of the links will open a new tab!</p>
-                    </div>
-                    </div>
+                    <div id="linkPopup" class="link-popup">
+                        <div class="link-popup-content">
+                            <div class="link-popup-header" onmousedown="startDrag(event)">
+                            <span>links</span>
+                            <button onclick="closeLinks()" class="close-btn">[ x ]</button>
+                        </div>
+                        <div class="link-grid">
+                            <a href="https://www.instagram.com/c.fyela" target="_blank" class="link-item instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                                <span>instagram</span>
+                            </a>
+                            <a href="https://www.facebook.com/febeyaa" target="_blank" class="link-item facebook">
+                                <i class="fa-brands fa-facebook"></i>
+                                <span>facebook</span>
+                            </a>
+                            <a href="https://www.tiktok.com/@_kent1_1" target="_blank" class="link-item tiktok">
+                                <i class="fa-brands fa-tiktok"></i>
+                                <span>tiktok</span>
+                            </a>
+                        </div>
             </header>   
             <script src="script.js"></script>
             <script>
@@ -222,6 +220,43 @@
                         document.removeEventListener('mousemove', drag);
                         document.removeEventListener('mouseup', stopDrag);
                     }   
+
+                    // <-- links pop up --> //
+                    // open and close functions
+                    function openLinks() {
+                    document.getElementById('linkPopup').style.display = 'flex';
+                    }
+
+                    function closeLinks() {
+                    document.getElementById('linkPopup').style.display = 'none';
+                    }
+
+                    // draggable popup function
+                    let isDraggingLinks = false;
+                    let offsetXLinks = 0, offsetYLinks = 0;
+                    const linkPopupContent = document.querySelector('.link-popup-content');
+
+                    function startDrag(e) {
+                    isDraggingLinks = true;
+                    offsetXLinks = e.clientX - linkPopupContent.offsetLeft;
+                    offsetYLinks = e.clientY - linkPopupContent.offsetTop;
+                    document.addEventListener('mousemove', dragLinks);
+                    document.addEventListener('mouseup', stopDragLinks);
+                    }
+
+                    function dragLinks(e) {
+                    if (isDraggingLinks) {
+                        linkPopupContent.style.left = e.clientX - offsetXLinks + 'px';
+                        linkPopupContent.style.top = e.clientY - offsetYLinks + 'px';
+                        linkPopupContent.style.position = 'absolute';
+                    }
+                    }
+
+                    function stopDragLinks() {
+                    isDraggingLinks = false;
+                    document.removeEventListener('mousemove', dragLinks);
+                    document.removeEventListener('mouseup', stopDragLinks);
+                    }
             </script>                        
         </body>
 </html>
