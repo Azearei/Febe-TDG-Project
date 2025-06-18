@@ -520,7 +520,6 @@
   display: none;
   position: fixed;
   top: 20vh;
-  left: 50%;
   transform: translateX(-50%);
   border-radius: 0.5rem;
   z-index: 1000;
