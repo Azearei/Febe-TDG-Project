@@ -1,6 +1,154 @@
 /* Import custom font */
 @import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
 
+iframe {
+  overflow-x: hidden;       
+  display: block;           
+}
+
+
+.theme-toggle {
+  position: fixed;
+  top: 2vw;
+  left: 2vw;
+  z-index: 2000;
+  font-size: 3vw;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+body.dark-theme .theme-toggle {
+  color: #e9e4e6;
+}
+
+
+/* Default light theme (no extra class needed — it's the base styling) */
+body {
+  background-color: #fff;
+  color: #222;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background-color: #121212;
+  color: #e9e4e6;
+}
+
+/* Dark theme window styling */
+body.dark-theme .window {
+  background-color: #002855;
+}
+
+/* Dark theme popups */
+body.dark-theme .about-popup,
+body.dark-theme .research-popup,
+body.dark-theme .portfolio-popup,
+body.dark-theme .contact-popup,
+body.dark-theme .link-popup-content {
+  background-color: #0353a4;
+  color: #e9e4e6;
+}
+
+
+/* Dark theme header and popup headers */
+body.dark-theme .window-header,
+body.dark-theme .about-popup-header,
+body.dark-theme .research-popup-header,
+body.dark-theme .portfolio-popup-header,
+body.dark-theme .contact-popup-header,
+body.dark-theme .link-popup-header {
+  background-color: #222;
+  color: #e9e4e6;
+  border: 2px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: none;
+}
+
+body.dark-theme .window-content, 
+body.dark-theme .about-popup iframe,
+body.dark-theme .research-popup iframe,
+body.dark-theme .portfolio-popup iframe {
+  border: 2px solid white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #403F48;
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+body.dark-theme::-webkit-scrollbar-thumb {
+  background-color: #e9e4e6;
+}
+
+
+body.dark-theme .icon-button, body.dark-theme .window p {
+  color: white;
+}
+
+body.dark-theme .portfolio iframe {
+ background-color: #002855; 
+}
+
+
+body.dark-theme .portfolio-body h1,
+body.dark-theme .portfolio-body p,
+body.dark-theme .portfolio-body strong {
+  color: #e9e4e6;
+}
+
+body.dark-theme .portfolio-body hr {
+  border-color: #e9e4e6;
+}
+
+body.dark-theme .portfolio-image {
+  border: 2px solid #333;
+}
+
+body.dark-theme .about-body {
+  background-color: #002855;
+  color: #e9e4e6;
+}
+
+body.dark-theme .about-body h1,
+body.dark-theme .about-body p {
+  color: #e9e4e6;
+}
+
+body.dark-theme .about-body hr {
+  border-color: #e9e4e6;
+}
+
+/* Dark theme for Research iframe */
+body.dark-theme .research-body {
+  background-color: #121212;
+  color: #e9e4e6;
+}
+
+body.dark-theme .research-body h1,
+body.dark-theme .research-body h3,
+body.dark-theme .research-body p {
+  color: #e9e4e6;
+}
+
+body.dark-theme .research-body hr {
+  border-color: #e9e4e6;
+}
+
 #contactPopup, #aboutPopup {
   display: none;
 }
@@ -567,10 +715,6 @@
   margin-top: 1rem;
   margin-bottom: 0.5rem;
   transition: all 0.3s ease;
-}
-
-.link-item:hover i {
-  filter: drop-shadow(0 0 3px #e9e4e6) drop-shadow(0 0 3px #e9e4e6);
 }
 
 /* individual platform color hovers */

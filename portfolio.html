@@ -125,6 +125,10 @@
 
         <script src="script.js"></script>
             <script>
+                    if (localStorage.getItem("theme") === "dark") {
+                    document.body.classList.add("dark-theme");
+                    }
+                    
                      // wait for the page to load
                     document.addEventListener("DOMContentLoaded", () => {
                     const images = document.querySelectorAll(".portfolio-image");

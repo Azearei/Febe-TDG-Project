@@ -14,6 +14,10 @@
     </head>
         <body>
             <header>
+                <div class="theme-toggle">
+                    <i id="themeIcon" class="fa-solid fa-moon"></i>
+                </div>
+
                 <div class="window">
                 <div class="window-header">home</div>
                 <div class="window-content">
@@ -72,7 +76,7 @@
                     </div>
                     <!-- Contact Popup -->
                     <div id="contactPopup" class="contact-popup">
-                        <div class="contact-popup-header" onmousedown="startDrag(event)">
+                        <div class="contact-popup-header" onmousedown="startDragContact(event)">
                             <span>contact</span>
                             <button onclick="closeContact()" class="close-btn">[ x ]</button>
                         </div>
@@ -109,6 +113,36 @@
             </header>   
             <script src="script.js"></script>
             <script>
+                    // <-- theme toggle --> //
+                    const themeIcon = document.getElementById("themeIcon");
+
+                    // Load stored theme on page load
+                    if (localStorage.getItem("theme") === "dark") {
+                    document.body.classList.add("dark-theme");
+                    themeIcon.classList.remove("fa-sun");
+                    themeIcon.classList.add("fa-moon");
+                    } else {
+                    document.body.classList.remove("dark-theme");
+                    themeIcon.classList.remove("fa-moon");
+                    themeIcon.classList.add("fa-sun");
+                    }
+
+                    // Toggle theme on icon click
+                    themeIcon.addEventListener("click", () => {
+                    document.body.classList.toggle("dark-theme");
+
+                    if (document.body.classList.contains("dark-theme")) {
+                        themeIcon.classList.remove("fa-sun");
+                        themeIcon.classList.add("fa-moon");
+                        localStorage.setItem("theme", "dark");
+                    } else {
+                        themeIcon.classList.remove("fa-moon");
+                        themeIcon.classList.add("fa-sun");
+                        localStorage.setItem("theme", "light");
+                    }
+                    });
+
+
                     // <-- about pop up --> //
                     function openAbout() {
                     document.getElementById('aboutPopup').style.display = 'block';
@@ -185,41 +219,39 @@
                         // makes the portfolio popup draggable
                     dragElement(document.getElementById("portfolioPopup"));
 
-
                     // <-- contact pop up --> //
-                    const popup = document.getElementById('contactPopup');
-                    let isDragging = false;
-                    let offsetX = 0,
-                        offsetY = 0;
+                    const contactPopup = document.getElementById('contactPopup');
+                    let isDraggingContact = false;
+                    let offsetXContact = 0, offsetYContact = 0;
 
                     function openContact() {
-                        popup.style.display = 'block';
+                    contactPopup.style.display = 'block';
                     }
 
                     function closeContact() {
-                        popup.style.display = 'none';
+                    contactPopup.style.display = 'none';
                     }
 
-                    function startDrag(e) {
-                        isDragging = true;
-                        offsetX = e.clientX - popup.offsetLeft;
-                        offsetY = e.clientY - popup.offsetTop;
-                        document.addEventListener('mousemove', drag);
-                        document.addEventListener('mouseup', stopDrag);
+                    function startDragContact(e) {
+                    isDraggingContact = true;
+                    offsetXContact = e.clientX - contactPopup.offsetLeft;
+                    offsetYContact = e.clientY - contactPopup.offsetTop;
+                    document.addEventListener('mousemove', dragContact);
+                    document.addEventListener('mouseup', stopDragContact);
                     }
 
-                    function drag(e) {
-                        if (isDragging) {
-                        popup.style.left = e.clientX - offsetX + 'px';
-                        popup.style.top = e.clientY - offsetY + 'px';
-                        }
+                    function dragContact(e) {
+                    if (isDraggingContact) {
+                        contactPopup.style.left = e.clientX - offsetXContact + 'px';
+                        contactPopup.style.top = e.clientY - offsetYContact + 'px';
+                    }
                     }
 
-                    function stopDrag() {
-                        isDragging = false;
-                        document.removeEventListener('mousemove', drag);
-                        document.removeEventListener('mouseup', stopDrag);
-                    }   
+                    function stopDragContact() {
+                    isDraggingContact = false;
+                    document.removeEventListener('mousemove', dragContact);
+                    document.removeEventListener('mouseup', stopDragContact);
+                    }
 
                     // <-- links pop up --> //
                     // open and close functions
