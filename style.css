@@ -668,7 +668,6 @@ body.dark-theme .research-body hr {
   display: none;
   position: fixed;
   top: 20vh;
-  left: 50%;
   transform: translateX(-50%);
   border-radius: 0.5rem;
   z-index: 1000;
@@ -855,15 +854,14 @@ footer {
   font-size: 1rem;
 }
 
-.aboutSection ul {
+.aboutSection a {
   list-style: none;
   padding: 0;
-  margin: 0;
-}
-
-.aboutSection ul li {
   margin: 0.5vw 0;
   font-size: 0.9rem;
+  text-decoration: none;
+  color: #e9e4e6;
+  transition: color 0.3s ease;
 }
 
 .resourcesGrid {
@@ -880,7 +878,8 @@ footer {
   transition: color 0.3s ease;
 }
 
-.resourcesGrid a:hover {
+.resourcesGrid a:hover,
+.aboutSection a:hover {
   color: #ffffff;
   text-decoration: underline;
 }
