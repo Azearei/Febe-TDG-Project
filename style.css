@@ -30,29 +30,18 @@ body {
   transition: background 0.4s ease, color 0.4s ease;
 }
 
-/* Dark Theme */
+/* Dark Theme BG */
 body.dark-theme {
   background-color: #121212;
   color: #e9e4e6;
 }
 
-/* Dark theme window styling */
+/* dark theme window styling */
 body.dark-theme .window {
   background-color: #002855;
 }
 
-/* Dark theme popups */
-body.dark-theme .about-popup,
-body.dark-theme .research-popup,
-body.dark-theme .portfolio-popup,
-body.dark-theme .contact-popup,
-body.dark-theme .link-popup-content {
-  background-color: #0353a4;
-  color: #e9e4e6;
-}
-
-
-/* Dark theme header and popup headers */
+/* dark theme header and popup headers */
 body.dark-theme .window-header,
 body.dark-theme .about-popup-header,
 body.dark-theme .research-popup-header,
@@ -75,7 +64,6 @@ body.dark-theme .portfolio-popup iframe {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-
 
 body::-webkit-scrollbar {
   width: 8px;
