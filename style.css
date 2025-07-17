@@ -107,6 +107,7 @@ body.dark-theme .portfolio-image {
   border: 2px solid #333;
 }
 
+
 body.dark-theme .about-body {
   background-color: #002855;
   color: #e9e4e6;
@@ -137,6 +138,11 @@ body.dark-theme .research-body hr {
   border-color: #e9e4e6;
 }
 
+body.dark-theme .highlight {
+  color: #2196f3
+}
+
+
 #contactPopup, #aboutPopup {
   display: none;
 }
@@ -146,21 +152,27 @@ body.dark-theme .research-body hr {
   margin: 50px auto;
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   overflow: hidden;
 }
 
 .window-header {
-  background: #333;
-  color: #fff;
+  background: #feeaa5;
+  color: #333;
   padding: 0.75rem;
   font-weight: bold;
   font-family: monospace;
+  border: 2px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: none;
 }
 
 .window-content {
   padding: 1.5rem;
   text-align: center;
+  border: 2px solid black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .window-content h1 {
@@ -169,7 +181,7 @@ body.dark-theme .research-body hr {
 }
 
 .highlight {
-  color: #2196f3;
+  color: #feeaa5;
 }
 
 .window-content p {
@@ -220,6 +232,20 @@ body.dark-theme .research-body hr {
   font-size: 1rem;
   font-weight: bold;
   transition: color 0.3s ease;
+}
+
+/* dark hover effect */
+body.dark-theme .icon-button:hover {
+  transform: scale(1.15);
+  color: #feeaa5;
+}
+
+body.dark-theme .icon-button:hover i {
+  color: #feeaa5;
+}
+
+body.dark-theme .icon-button:hover span {
+  color: #feeaa5;
 }
 
 /* hover effect */
@@ -352,8 +378,8 @@ body.dark-theme .research-body hr {
 }
 
 .about-popup-header {
-  background-color: #333;
-  color: #fff;
+  background-color: #feeaa5;
+  color: #333;
   padding: 0.8rem 1.2rem;
   display: flex;
   justify-content: space-between;
@@ -389,8 +415,8 @@ body.dark-theme .research-body hr {
 }
 
 .research-popup-header {
-  background-color: #333;
-  color: #fff;
+  background-color: #feeaa5;
+  color: #333;
   padding: 0.8rem 1.2rem;
   display: flex;
   justify-content: space-between;
@@ -470,8 +496,8 @@ body.dark-theme .research-body hr {
 }
 
 .portfolio-popup-header {
-  background-color: #333;
-  color: #fff;
+  background-color: #feeaa5;
+  color: #333;
   padding: 0.8rem 1.2rem;
   display: flex;
   justify-content: space-between;
@@ -601,8 +627,8 @@ body.dark-theme .research-body hr {
 }
 
 .contact-popup-header {
-  background-color: #333;
-  color: #fff;
+  background-color: #feeaa5;
+  color: #333;
   padding: 0.8rem 1.2rem;
   display: flex;
   justify-content: space-between;
@@ -674,8 +700,8 @@ body.dark-theme .research-body hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #333;
-  color: #fff;
+  background: #feeaa5;
+  color: #333;
   padding: 0.5rem;
   margin: -1.5rem -1.5rem 1rem;
   border-radius: 0.75rem 0.75rem 0 0;
