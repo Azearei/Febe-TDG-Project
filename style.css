@@ -19,7 +19,7 @@ iframe {
 }
 
 body.dark-theme .theme-toggle {
-  color: #2196f3;
+  color: #fff;
 }
 
 
@@ -37,18 +37,26 @@ body.dark-theme {
 }
 
 /* dark theme window styling */
-body.dark-theme .window {
+body.dark-theme .window, {
   background-color: #002855;
 }
 
 /* dark theme header and popup headers */
-body.dark-theme .window-header,
+body.dark-theme .window-header {
+  background-color: #222;
+  color: #e9e4e6;
+  border: 2px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: none;
+}
+
 body.dark-theme .about-popup-header,
 body.dark-theme .research-popup-header,
 body.dark-theme .portfolio-popup-header,
 body.dark-theme .contact-popup-header,
 body.dark-theme .link-popup-header {
-  background-color: #222;
+  background-color: #002855;
   color: #e9e4e6;
   border: 2px solid white;
   border-top-left-radius: 10px;
@@ -80,7 +88,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body.dark-theme::-webkit-scrollbar-thumb {
-  background-color: #e9e4e6;
+  background-color: #0653b9;
 }
 
 
@@ -109,7 +117,7 @@ body.dark-theme .portfolio-image {
 
 
 body.dark-theme .about-body {
-  background-color: #002855;
+  background-color: #121212;
   color: #e9e4e6;
 }
 
