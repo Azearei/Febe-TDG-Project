@@ -6,7 +6,6 @@ iframe {
   display: block;           
 }
 
-
 .theme-toggle {
   position: fixed;
   top: 2vw;
@@ -18,19 +17,38 @@ iframe {
   transition: color 0.3s ease;
 }
 
+body {
+  transition: background 0.4s ease, color 0.4s ease;
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-attachment: fixed;
+  animation: scrollClouds 60s linear infinite;
+}
+
+/* Light Theme Background */
+body.light-theme {
+  background-image: url('imagefile/day.png');
+}
+
+/* Dark Theme Background */
+body.dark-theme {
+  background-image: url('imagefile/night.png');
+}
+
+/* Cloud scrolling animation */
+@keyframes scrollClouds {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 1000px 0;
+  }
+}
+
 body.dark-theme .theme-toggle {
   color: #fff;
 }
 
-
-/* Default light theme (no extra class needed — it's the base styling) */
-body {
-  background-color: #fff;
-  color: #222;
-  transition: background 0.4s ease, color 0.4s ease;
-}
-
-/* Dark Theme BG */
 body.dark-theme {
   background-color: #121212;
   color: #e9e4e6;
@@ -91,9 +109,8 @@ body.dark-theme::-webkit-scrollbar-thumb {
   background-color: #0653b9;
 }
 
-
 body.dark-theme .icon-button, body.dark-theme .window p {
-  color: white;
+  color: #333;
 }
 
 body.dark-theme .portfolio iframe {
@@ -186,6 +203,7 @@ body.dark-theme .highlight {
 .window-content h1 {
   font-size: 3rem;
   margin: 0;
+  color: #333;
 }
 
 .highlight {
