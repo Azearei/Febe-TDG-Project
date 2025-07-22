@@ -13,7 +13,6 @@
         <!--Non Visible Content-->
     </head>
         <body>
-
             <div class="about-body">
                 <!-- title section -->
                 <div class="about-header-title">
@@ -45,11 +44,13 @@
                     </p>
                 </div>
             </div>
-            <script src="script.js"></script>
                 <script>
+                        document.addEventListener("DOMContentLoaded", function () {
                         if (localStorage.getItem("theme") === "dark") {
-                        document.body.classList.add("dark-theme");
+                            document.body.classList.add("dark-theme");
                         }
+                    });
                 </script>
+            <script src="script.js"></script>
         </body>
 </html>

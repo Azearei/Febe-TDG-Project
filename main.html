@@ -120,7 +120,7 @@
 
                     const themeIcon = document.getElementById("themeIcon");
 
-                    // Load stored theme on page load
+                    // load stored theme on page load
                     const savedTheme = localStorage.getItem("theme");
                     if (savedTheme === "dark") {
                         document.body.classList.remove("light-theme");
@@ -134,7 +134,7 @@
                         themeIcon.classList.add("fa-sun");
                     }
 
-                    // Toggle theme on icon click
+                    // toggle theme on icon click //
                     themeIcon.addEventListener("click", () => {
                         const isDark = document.body.classList.contains("dark-theme");
                         
