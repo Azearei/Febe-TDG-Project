@@ -6,6 +6,7 @@ iframe {
   display: block; 
 }
 
+/* sun */
 .theme-toggle {
   position: fixed;
   top: 2vw;
@@ -17,6 +18,7 @@ iframe {
   transition: color 0.3s ease;
 }
 
+/* moon */
 body.dark-theme .theme-toggle {
   color: #fff;
 }
@@ -29,12 +31,12 @@ body {
   animation: scrollClouds 60s linear infinite;
 }
 
-/* light theme main bg */
+/* light theme main bg pixel art*/
 body.light-theme {
   background-image: url('imagefile/day.png');
 }
 
-/* dark theme main bg */
+/* dark theme main bg pixel art*/
 body.dark-theme {
   background-image: url('imagefile/night.png');
 }
@@ -49,13 +51,13 @@ body.dark-theme {
   }
 }
 
-/* dark theme window styling */
+/* dark theme window styling +contact popup */
 body.dark-theme .window,
 body.dark-theme .contact-popup {
   background-color: #002855;
 }
 
-/* dark theme popups' headers */
+/* dark theme style */
 body.dark-theme .window-header,
 body.dark-theme .contact-popup-header,
 body.dark-theme .about-popup-header,
@@ -104,7 +106,6 @@ body.dark-theme .link-item.facebook:hover i {
   transition: filter 0.3s ease, transform 0.3s ease;
   transform: scale(1.2);
 }
-
 
 body::-webkit-scrollbar {
   width: 8px;
@@ -163,6 +164,7 @@ body.dark-theme .portfolio-image {
 body.dark-theme .highlight {
   color: #2196f3
 }
+/* dark them style end */
 
 #contactPopup, #aboutPopup {
   display: none;
@@ -378,7 +380,6 @@ body.dark-theme .icon-button:hover span {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-
 .about-text p {
   margin: 1.2rem 0;
   font-family: Georgia, serif;
@@ -571,8 +572,7 @@ body.dark-theme .icon-button:hover span {
   font-size: 20px;
 }
 
-
-/* Portfolio Grid Layout */
+/* portfolio grid Layout */
 .portfolio-images {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -596,7 +596,7 @@ body.dark-theme .icon-button:hover span {
   transform: scale(1.05);
 }
 
-/* Responsive stacking for mobile */
+/* responsive stacking for mobile */
 @media screen and (max-width: 768px) {
   .portfolio-images {
     grid-template-columns: 1fr;
@@ -633,6 +633,7 @@ body.dark-theme .icon-button:hover span {
   font-weight: bold;
   cursor: pointer;
 }
+
 /* contact popup styling */
 .contact-popup {
   position: fixed;
@@ -661,27 +662,23 @@ body.dark-theme .icon-button:hover span {
   border-top-right-radius: 12px;
 }
 
-/* Popup body */
 .contact-popup-body {
   padding: 1.5rem;
   text-align: center;
   color: #333;
 }
 
-/* Heading */
 .contact-popup-body h2 {
   font-size: 1.4rem;
   color: #2196f3;
   margin-bottom: 0.5rem;
 }
 
-/* Paragraph */
 .contact-popup-body p {
   margin: 0.8rem 0;
   font-size: 0.95rem;
 }
 
-/* Email link */
 .contact-popup-body a {
   color: #2196f3;
   text-decoration: underline;
@@ -692,7 +689,6 @@ body.dark-theme .icon-button:hover span {
   text-decoration: underline;
 }
 
-/* Image */
 .contact-popup-img {
   width: 100%;
   border-radius: 8px;
@@ -752,7 +748,7 @@ body.dark-theme .icon-button:hover span {
   transition: all 0.3s ease;
 }
 
-/* individual platform color hovers */
+/* individual socmeds color hovers */
 .link-item.instagram:hover i {
   color: #fff;
   background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
@@ -783,7 +779,7 @@ body.dark-theme .icon-button:hover span {
   margin-top: 1rem;
 }
 
-/* pops up close button */
+/* pop ups close button */
 .close-btn {
   background: transparent;
   color: #fff;
