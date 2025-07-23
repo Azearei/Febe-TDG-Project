@@ -102,7 +102,7 @@ body.dark-theme .link-item {
 }
 
 body.dark-theme .link-item.facebook:hover i {
-  color: #25F4EE;
+  color: #2196f3;
   transition: filter 0.3s ease, transform 0.3s ease;
   transform: scale(1.2);
 }
