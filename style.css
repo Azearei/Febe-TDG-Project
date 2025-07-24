@@ -20,10 +20,8 @@ iframe {
 
 /* moon */
 body.dark-theme .theme-toggle {
-  color: #fff;
+  color: white;
 }
-
-
 
 body {
   transition: background 0.4s ease, color 0.4s ease;
@@ -66,7 +64,7 @@ body.dark-theme .about-popup-header,
 body.dark-theme .research-popup-header,
 body.dark-theme .portfolio-popup-header {
   background-color: #222;
-  color: #e9e4e6;
+  color: white;
   border: 2px solid white;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -104,7 +102,7 @@ body.dark-theme .link-item {
 }
 
 body.dark-theme .link-item.facebook:hover i {
-  color: #2196f3;
+  color: #25F4EE;
   transition: filter 0.3s ease, transform 0.3s ease;
   transform: scale(1.2);
 }
@@ -124,15 +122,18 @@ body::-webkit-scrollbar-thumb {
 }
 
 body.dark-theme::-webkit-scrollbar-thumb {
-  background-color: #fff;
+  background-color: #000;
 }
 
 body.dark-theme .icon-button, 
 body.dark-theme .window p, 
 body.dark-theme .window h1 {
-  color: #e9e4e6;
+  color: white;
 }
 
+body.dark-theme .about-body,
+body.dark-theme .research-body,
+body.dark-theme .portfolio-body,
 body.dark-theme .about-popup,
 body.dark-theme .research-popup,
 body.dark-theme .portfolio-popup  {
@@ -147,25 +148,17 @@ body.dark-theme .portfolio-body strong,
 body.dark-theme .research-body h1,
 body.dark-theme .research-body h3,
 body.dark-theme .research-body p {
-  color: #e9e4e6;
+  color: white;
 }
 
 body.dark-theme .portfolio-body hr,
 body.dark-theme .research-body hr,
 body.dark-theme .about-body hr {
-  border-color: #e9e4e6;
+  border-color: white;
 }
 
 body.dark-theme .portfolio-image {
   border: 2px solid #333;
-}
-
-body.dark-theme .research-body,
-body.dark-theme .portfolio-body,
-body.dark-theme .about-body {
-  max-width: 100%;
-  padding: 5px 80px;
-  background-color: #002855;
 }
 
 body.dark-theme .highlight {
@@ -180,7 +173,7 @@ body.dark-theme .highlight {
 .window {
   width: 600px;
   margin: 50px auto;
-  background: #fff;
+  background: white;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -375,7 +368,7 @@ body.dark-theme .icon-button:hover span {
   max-width: 550px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: white;
 }
 
 .about-body img {
@@ -398,7 +391,7 @@ body.dark-theme .icon-button:hover span {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #fff;
+  background: white;
   border-radius: 8px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   max-width: 600px;
@@ -409,7 +402,7 @@ body.dark-theme .icon-button:hover span {
 
 .about-popup-header {
   background-color: #333;
-  color: #fff;
+  color: white;
   padding: 0.8rem 1.2rem;
   display: flex;
   justify-content: space-between;
@@ -433,7 +426,7 @@ body.dark-theme .icon-button:hover span {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #fff;
+  background: white;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   width: 800px;
@@ -446,7 +439,7 @@ body.dark-theme .icon-button:hover span {
 
 .research-popup-header {
   background-color: #333;
-  color: #fff;
+  color: white;
   padding: 0.8rem 1.2rem;
   display: flex;
   justify-content: space-between;
@@ -491,7 +484,7 @@ body.dark-theme .icon-button:hover span {
   max-width: 550px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: white;
 }
 
 .research-body img {
@@ -514,7 +507,7 @@ body.dark-theme .icon-button:hover span {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #fff;
+  background: white;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   width: 850px;
@@ -527,7 +520,7 @@ body.dark-theme .icon-button:hover span {
 
 .portfolio-popup-header {
   background-color: #333;
-  color: #fff;
+  color: white;
   padding: 0.8rem 1.2rem;
   display: flex;
   justify-content: space-between;
@@ -635,7 +628,7 @@ body.dark-theme .icon-button:hover span {
   position: absolute;
   top: 20px;
   right: 30px;
-  color: #fff;
+  color: white;
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
@@ -647,7 +640,7 @@ body.dark-theme .icon-button:hover span {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #fff;
+  background: white;
   border-radius: 8px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   max-width: 420px;
@@ -658,7 +651,7 @@ body.dark-theme .icon-button:hover span {
 
 .contact-popup-header {
   background-color: #333;
-  color: #fff;
+  color: white;
   padding: 0.8rem 1.2rem;
   display: flex;
   justify-content: space-between;
@@ -713,7 +706,7 @@ body.dark-theme .icon-button:hover span {
 }
 
 .link-popup-content {
-  background: #fff;
+  background: white;
   padding: 1.5rem;
   border-radius: 0.75rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
@@ -726,7 +719,7 @@ body.dark-theme .icon-button:hover span {
   justify-content: space-between;
   align-items: center;
   background: #333;
-  color: #fff;
+  color: white;
   padding: 0.5rem;
   margin: -1.5rem -1.5rem 1rem;
   border-radius: 0.75rem 0.75rem 0 0;
@@ -757,7 +750,7 @@ body.dark-theme .icon-button:hover span {
 
 /* individual socmeds color hovers */
 .link-item.instagram:hover i {
-  color: #fff;
+  color: white;
   background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -789,7 +782,7 @@ body.dark-theme .icon-button:hover span {
 /* pop ups close button */
 .close-btn {
   background: transparent;
-  color: #fff;
+  color: white;
   border: none;
   font-size: 1.1rem;
   cursor: pointer;
@@ -823,8 +816,8 @@ body.dark-theme .icon-button:hover span {
 }
 
 .image-credit a:hover {
-  color: #fff;
-  border-bottom: 1px solid #fff;
+  color: white;
+  border-bottom: 1px solid white;
 }
 
 body.dark-theme .image-credit {
