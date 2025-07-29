@@ -131,10 +131,14 @@ body.dark-theme .window h1 {
   color: white;
 }
 
-body.dark-theme .about-body,
 body.dark-theme .research-body,
 body.dark-theme .portfolio-body,
-body.dark-theme .about-popup,
+body.dark-theme .about-body {
+  max-width: 100%;
+  padding: 5px 80px;
+  background-color: #002855;
+}
+
 body.dark-theme .research-popup,
 body.dark-theme .portfolio-popup  {
   background: #002855;
