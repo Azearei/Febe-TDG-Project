@@ -820,8 +820,8 @@ body.dark-theme .icon-button:hover span {
 }
 
 .image-credit a:hover {
-  color: white;
-  border-bottom: 1px solid white;
+  color: #ffb449;
+  border-bottom: 1px solid #ffb449;
 }
 
 body.dark-theme .image-credit {
@@ -834,7 +834,7 @@ body.dark-theme .image-credit a {
 }
 
 body.dark-theme .image-credit a:hover {
-  color: #5555aa;
-  border-bottom: 1px solid #5555aa;
+  color: #0653b9;
+  border-bottom: 1px solid #0653b9;
 }
 
