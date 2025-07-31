@@ -20,7 +20,7 @@ iframe {
 
 /* moon */
 body.dark-theme .theme-toggle {
-  color: white;
+  color: hsl(56, 26%, 89%);
 }
 
 body {
@@ -122,13 +122,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body.dark-theme::-webkit-scrollbar-thumb {
-  background-color: #000;
-}
-
-body.dark-theme .body::-webkit-scrollbar-track {
-  background-color: #403F48;
-  border-radius: 10px;
-  border: 2px solid transparent;
+  background-color: hsl(56, 26%, 89%);
 }
 
 body.dark-theme .icon-button, 
@@ -146,7 +140,8 @@ body.dark-theme .about-body {
 }
 
 body.dark-theme .research-popup,
-body.dark-theme .portfolio-popup  {
+body.dark-theme .portfolio-popup,
+body.dark-theme .about-popup  {
   background: #002855;
 }
 
