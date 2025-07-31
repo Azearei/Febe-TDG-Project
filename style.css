@@ -125,6 +125,12 @@ body.dark-theme::-webkit-scrollbar-thumb {
   background-color: #000;
 }
 
+body.dark-theme .body::-webkit-scrollbar-track {
+  background-color: #403F48;
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
 body.dark-theme .icon-button, 
 body.dark-theme .window p, 
 body.dark-theme .window h1 {
