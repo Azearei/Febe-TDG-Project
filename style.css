@@ -131,14 +131,6 @@ body.dark-theme .window h1 {
   color: white;
 }
 
-body.dark-theme .research-body,
-body.dark-theme .portfolio-body,
-body.dark-theme .about-body {
-  max-width: 100%;
-  padding: 5px 80px;
-  background-color: #002855;
-}
-
 body.dark-theme .research-popup,
 body.dark-theme .portfolio-popup,
 body.dark-theme .about-popup  {
@@ -169,6 +161,45 @@ body.dark-theme .portfolio-image {
 body.dark-theme .highlight {
   color: #2196f3
 }
+
+/* text below links */
+body.dark-theme .link-text {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 1.2rem;
+  color: white;
+  font-family: inherit;
+  border: 1.5px solid white; 
+  border-radius: 10px;
+  padding: 0.8rem 1.2rem;
+  width: fit-content; 
+}
+
+/* ctto text */
+body.dark-theme .credit-text {
+  text-align: center;
+  font-size: 1rem;
+  color: white; 
+  margin-top: 1.5rem;
+  padding-bottom: 0.8rem;
+  position: relative;
+}
+
+/* hover effect */
+body.dark-theme .icon-button:hover {
+  transform: scale(1.15);
+  color: #2196f3;
+}
+
+body.dark-theme .icon-button:hover i {
+  color: #2196f3;
+}
+
+body.dark-theme .icon-button:hover span {
+  color: #2196f3;
+}
+
+
 /* dark them style end */
 
 #contactPopup, #aboutPopup {
@@ -261,20 +292,6 @@ body.dark-theme .highlight {
   font-size: 1rem;
   font-weight: bold;
   transition: color 0.3s ease;
-}
-
-/* dark hover effect */
-body.dark-theme .icon-button:hover {
-  transform: scale(1.15);
-  color: #2196f3;
-}
-
-body.dark-theme .icon-button:hover i {
-  color: #2196f3;
-}
-
-body.dark-theme .icon-button:hover span {
-  color: #2196f3;
 }
 
 /* hover effect */
@@ -683,7 +700,7 @@ body.dark-theme .icon-button:hover span {
 .image-credit a {
   color: #8888cc;
   text-decoration: none;
-  border-bottom: 1px dotted #aaa;
+  border-bottom: 1px none #aaa;
   transition: 0.3s ease;
 }
 
@@ -693,16 +710,15 @@ body.dark-theme .icon-button:hover span {
 }
 
 body.dark-theme .image-credit {
-  color: #ccc;
+  color: white;
 }
 
 body.dark-theme .image-credit a {
-  color: #fff;
-  border-bottom: 1px dotted #999;
+  color: white;
 }
 
 body.dark-theme .image-credit a:hover {
-  color: #0653b9;
+  color: white;
   border-bottom: 1px solid #0653b9;
 }
 
@@ -719,27 +735,7 @@ body.dark-theme .image-credit a:hover {
   width: fit-content; 
 }
 
-body.dark-theme .link-text {
-  text-align: center;
-  font-size: 1rem;
-  margin-top: 1.2rem;
-  color: white;
-  font-family: inherit;
-  border: 1.5px solid white; 
-  border-radius: 10px;
-  padding: 0.8rem 1.2rem;
-  width: fit-content; 
-}
-
-body.dark-theme .credit-text {
-  text-align: center;
-  font-size: 1rem;
-  color: white; 
-  margin-top: 1.5rem;
-  padding-bottom: 0.8rem;
-  position: relative;
-}
-
+/* ctto below the content */
 .credit-text {
   text-align: center;
   font-size: 1rem;
