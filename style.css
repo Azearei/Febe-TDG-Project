@@ -839,3 +839,48 @@ body.dark-theme .image-credit a:hover {
   border-bottom: 1px solid #0653b9;
 }
 
+/* credit-line below the pop up nav bar icons */
+.link-text {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 1.2rem;
+  color: #000;
+  font-family: inherit;
+  border: 1.5px solid #000; 
+  border-radius: 10px;
+  padding: 0.8rem 1.2rem;
+  width: fit-content; 
+}
+
+body.dark-theme .link-text {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 1.2rem;
+  color: white;
+  font-family: inherit;
+  border: 1.5px solid white; 
+  border-radius: 10px;
+  padding: 0.8rem 1.2rem;
+  width: fit-content; 
+}
+
+body.dark-theme .credit-text {
+  text-align: center;
+  font-size: 1rem;
+  color: white; 
+  margin-top: 1.5rem;
+  padding-bottom: 0.8rem;
+  position: relative;
+}
+
+.credit-text {
+  text-align: center;
+  font-size: 1rem;
+  color: #000; 
+  margin-top: 1.5rem;
+  padding-bottom: 0.8rem;
+  position: relative;
+}
+
+
+
