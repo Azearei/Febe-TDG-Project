@@ -692,7 +692,6 @@ body.dark-theme .icon-button:hover span {
 
 .image-credit {
   font-size: 0.9rem;
-  color: #666;
   margin-top: 8px;
   font-family: 'Arial', sans-serif;
 }
@@ -709,17 +708,13 @@ body.dark-theme .icon-button:hover span {
   border-bottom: 1px solid #ffb449;
 }
 
-body.dark-theme .image-credit {
-  color: white;
-}
-
 body.dark-theme .image-credit a {
-  color: white;
+  color: #962fbf;
 }
 
 body.dark-theme .image-credit a:hover {
-  color: white;
-  border-bottom: 1px solid #0653b9;
+  color: #25F4EE;
+  border-bottom: 1px solid #25F4EE;
 }
 
 /* credit-line below the pop up nav bar icons */
