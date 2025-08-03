@@ -6,28 +6,6 @@ iframe {
   display: block; 
 }
 
-#iframePopup {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-
-  background-color: #0e2239;
-  border: 2px solid #ffffffa4;
-  padding: 1.5rem;
-  border-radius: 20px;
-  box-shadow: 0 0 18px #00000077;
-
-  width: 90%;
-  max-width: 700px;
-  max-height: 90vh;
-  overflow-y: auto;
-
-  animation: fadeIn 0.3s ease-in-out;
-}
-
 /* sun */
 .theme-toggle {
   position: fixed;
@@ -313,7 +291,7 @@ body.dark-theme .icon-button:hover span {
   color: #ffb449;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .window {
     width: 90%;
     margin: 20px auto;
@@ -340,40 +318,38 @@ body.dark-theme .icon-button:hover span {
     padding: 1rem;
   }
 
+  .about-image,
+  .research-image,
   .portfolio-image {
     width: 100%;
     height: auto;
   }
 
+  .about-text,
+  .research-text,
   .portfolio-text {
     font-size: 0.95rem;
     text-align: center;
   }
-
-  .portfolio-popup-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
   
+  .about,
+  .research,
   .portfolio {
     grid-template-columns: 1fr;
   }
 
+  .about img,
+  .research img,
   .portfolio img {
     width: 100%;
     margin-bottom: 0;
   }
-
-    #iframePopup {
-    padding: 1rem;
-    font-size: 0.9rem;
-  }
 }
-
 
 /* title + line */
-.about-header-title {
+.about-header-title,
+.research-header-title,
+.portfolio-header-title {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -381,144 +357,42 @@ body.dark-theme .icon-button:hover span {
   color: #403F48;
 }
 
-.about-header-title h1 {
+.about-header-title h1,
+.research-header-title h1,
+.portfolio-header-title h1 {
   font-family: 'Island Moments', cursive;
-  font-size: 6vw;
+  font-size: 2rem;
   margin: 0;
   margin-right: 2%;
+  margin-bottom:10px;
   font-weight: normal;
 }
 
-.about-header-title hr {
+.about-header-title hr,
+.research-header-title hr,
+.portfolio-header-title hr {
   flex: 1;
   height: 2px;
   border: none;
   border-top: 0.1vw solid #403F48;
 }
 
-.about-body {
-  max-width: 550px;
+.about-text,
+.research-text,
+.portfolio-text {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.about-body,
+.research-body,
+.portfolio-body {
+  max-width: 80vw;
   margin: 0 auto;
-  padding: 20px;
-  background-color: white;
+  padding: 20px 0;
 }
 
-.about-body img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.about-text p {
-  margin: 1.2rem 0;
-  font-family: Georgia, serif;
-
-}
-
-.about-popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-  max-width: 600px;
-  padding: 0;
-  overflow: hidden;
-  z-index: 1000;
-}
-
-.about-popup-header {
-  background-color: #333;
-  color: white;
-  padding: 0.8rem 1.2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1rem;
-  font-weight: bold;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  cursor: move;
-}
-
-.about-popup-iframe {
-  width: 600px;
-  height: 800px;
-  border: none;
-}
-
-/* camera info poppup styling */
-.research-popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-  width: 800px;
-  max-width: 90%;
-  padding: 0;
-  overflow: hidden;
-  z-index: 1000;
-  display: none;
-}
-
-.research-popup-header {
-  background-color: #333;
-  color: white;
-  padding: 0.8rem 1.2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1rem;
-  font-weight: bold;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  cursor: move;
-}
-
-.research-popup-iframe {
-  width: 100%;
-  height: 80vh;
-  border: none;
-}
-
-.research-header-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5vw 0 1vw 0;
-  color: #403F48;
-}
-
-.research-header-title h1 {
-  font-family: 'Island Moments', cursive;
-  font-size: 6vw;
-  margin: 0;
-  margin-right: 2%;
-  font-weight: normal;
-}
-
-.research-header-title hr {
-  flex: 1;
-  height: 2px;
-  border: none;
-  border-top: 0.1vw solid #403F48;
-}
-
-.research-body {
-  max-width: 550px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: white;
-}
-
+.about-body img,
 .research-body img {
   max-width: 100%;
   height: auto;
@@ -528,12 +402,9 @@ body.dark-theme .icon-button:hover span {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.research-text p {
-  margin: 1.2rem 0;
-  font-family: Georgia, serif;
-}
-
-/* portfolio popup styling */
+/* popup styling */
+.about-popup,
+.research-popup,
 .portfolio-popup {
   position: fixed;
   top: 50%;
@@ -550,6 +421,8 @@ body.dark-theme .icon-button:hover span {
   display: none;
 }
 
+.about-popup-header,
+.research-popup-header,
 .portfolio-popup-header {
   background-color: #333;
   color: white;
@@ -564,44 +437,12 @@ body.dark-theme .icon-button:hover span {
   cursor: move;
 }
 
+.about-popup-iframe,
+.research-popup-iframe,
 .portfolio-popup-iframe {
   width: 100%;
   height: 85vh;
   border: none;
-}
-.portfolio-body {
-  max-width: 80vw;
-  margin: 0 auto;
-  padding: 20px 0;
-}
-
-.portfolio-header-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5vw 0 1vw 0;
-  color: #403F48;
-}
-
-.portfolio-header-title h1 {
-  font-family: 'Island Moments', cursive;
-  font-size: 2rem;
-  margin: 0;
-  margin-right: 2%;
-  margin-bottom:10px;
-  font-weight: normal;
-}
-
-.portfolio-header-title hr {
-  flex: 1;
-  height: 2px;
-  border: none;
-  border-top: 0.1vw solid #403F48;
-}
-
-.portfolio-text {
-  margin-bottom: 20px;
-  font-size: 20px;
 }
 
 /* portfolio grid Layout */
@@ -667,6 +508,18 @@ body.dark-theme .icon-button:hover span {
 }
 
 /* contact popup styling */
+.contact-popup-header {
+  background-color: #333;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
 .contact-popup {
   position: fixed;
   top: 50%;
@@ -679,19 +532,6 @@ body.dark-theme .icon-button:hover span {
   padding: 0;
   overflow: hidden;
   z-index: 1000;
-}
-
-.contact-popup-header {
-  background-color: #333;
-  color: white;
-  padding: 0.8rem 1.2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1rem;
-  font-weight: bold;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
 }
 
 .contact-popup-body {
@@ -907,71 +747,6 @@ body.dark-theme .credit-text {
   margin-top: 1.5rem;
   padding-bottom: 0.8rem;
   position: relative;
-}
-
-/* popup containers */
-.about-popup,
-.research-popup,
-.portfolio-popup,
-.contact-popup,
-.link-popup {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-
-  /* stay centered on screen even when resized */
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-
-  /* adaptive sizing */
-  width: 90vw;
-  max-width: 800px;
-  height: auto;
-  max-height: 90vh;
-
-  background-color: #0e2239;
-  color: #fff;
-  border: 2px solid #ffffffa4;
-  border-radius: 16px;
-  padding: 1rem;
-  box-shadow: 0 0 18px rgba(0, 0, 0, 0.4);
-
-  overflow-y: auto;
-  box-sizing: border-box;
-}
-
-/* it makes iframe content scale inside popups */
-.about-popup iframe,
-.research-popup iframe,
-.portfolio-popup iframe {
-  width: 100%;
-  height: 65vh;
-  border: none;
-  border-radius: 12px;
-}
-
-/* contact and links popup inner content */
-.contact-popup-content,
-.link-popup-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-/* fade in for smoother feel */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translate(-50%, -55%); }
-  to { opacity: 1; transform: translate(-50%, -50%); }
-}
-
-.about-popup,
-.research-popup,
-.portfolio-popup,
-.contact-popup,
-.link-popup {
-  animation: fadeIn 0.25s ease-in-out;
 }
 
 
